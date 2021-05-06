@@ -7,3 +7,12 @@ C:\Users\diazda\Desktop\Nueva carpeta\Daniel\Cervantes\Programacion3\Proyecto_Se
 C:\Users\diazda\Desktop\Nueva carpeta\Daniel\Cervantes\Programacion3\Proyecto_Seguridad\Solution1\Capa_LogicaNegocio\obj\Debug\Capa_LogicaNegocio.csprojResolveAssemblyReference.cache
 C:\Users\diazda\Desktop\Nueva carpeta\Daniel\Cervantes\Programacion3\Proyecto_Seguridad\Solution1\Capa_LogicaNegocio\obj\Debug\Capa_LogicaNegocio.dll
 C:\Users\diazda\Desktop\Nueva carpeta\Daniel\Cervantes\Programacion3\Proyecto_Seguridad\Solution1\Capa_LogicaNegocio\obj\Debug\Capa_LogicaNegocio.pdb
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_LogicaNegocio\bin\Debug\Capa_LogicaNegocio.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_LogicaNegocio\bin\Debug\Capa_LogicaNegocio.pdb
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_LogicaNegocio\bin\Debug\Capa_AccesoDatos.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_LogicaNegocio\bin\Debug\Capa_Entidades.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_LogicaNegocio\bin\Debug\Capa_AccesoDatos.pdb
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_LogicaNegocio\bin\Debug\Capa_Entidades.pdb
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_LogicaNegocio\obj\Debug\Capa_LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_LogicaNegocio\obj\Debug\Capa_LogicaNegocio.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_LogicaNegocio\obj\Debug\Capa_LogicaNegocio.pdb

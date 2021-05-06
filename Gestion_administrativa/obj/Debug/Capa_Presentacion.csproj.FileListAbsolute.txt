@@ -37,3 +37,42 @@ C:\Users\diazda\Desktop\Nueva carpeta\Daniel\Cervantes\Programacion3\Proyecto_Se
 C:\Users\diazda\Desktop\Nueva carpeta\Daniel\Cervantes\Programacion3\Proyecto_Seguridad\Solution1\Gestion_administrativa\bin\Capa_Entidades.pdb
 C:\Users\diazda\Desktop\Nueva carpeta\Daniel\Cervantes\Programacion3\Proyecto_Seguridad\Solution1\Gestion_administrativa\bin\Capa_LogicaNegocio.pdb
 C:\Users\diazda\Desktop\Nueva carpeta\Daniel\Cervantes\Programacion3\Proyecto_Seguridad\Solution1\Gestion_administrativa\bin\Capa_AccesoDatos.pdb
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\ApplicationInsights.config
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\roslyn\csc.exe
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\roslyn\vbc.exe
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\roslyn\VBCSCompiler.exe
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Gestion_administrativa.dll.config
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Gestion_administrativa.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Gestion_administrativa.pdb
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Capa_Entidades.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Capa_LogicaNegocio.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.AI.Web.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.ApplicationInsights.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Capa_AccesoDatos.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Capa_Entidades.pdb
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Capa_LogicaNegocio.pdb
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.AI.Web.xml
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.ApplicationInsights.xml
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\bin\Capa_AccesoDatos.pdb
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\obj\Debug\Capa_Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\obj\Debug\Gestion_administrativa.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Gestion_administrativa\obj\Debug\Gestion_administrativa.pdb

@@ -108,10 +108,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PanelGeneral.aspx" />
+    <Content Include="RegistroDeUsuario.aspx" />
     <Content Include="resources\css\estilos.css" />
+    <Content Include="resources\css\style.css" />
+    <Content Include="resources\images\calendario.png" />
     <Content Include="resources\images\logo_administrador.png" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="scripts\validaciones.js" />
     <Content Include="Web.config" />
     <Content Include="login.aspx" />
   </ItemGroup>
@@ -137,6 +141,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroDeUsuario.aspx.cs">
+      <DependentUpon>RegistroDeUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroDeUsuario.aspx.designer.cs">
+      <DependentUpon>RegistroDeUsuario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

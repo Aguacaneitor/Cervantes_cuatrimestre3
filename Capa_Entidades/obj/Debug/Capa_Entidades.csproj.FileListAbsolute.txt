@@ -3,3 +3,8 @@ C:\Users\diazda\Desktop\Nueva carpeta\Daniel\Cervantes\Programacion3\Proyecto_Se
 C:\Users\diazda\Desktop\Nueva carpeta\Daniel\Cervantes\Programacion3\Proyecto_Seguridad\Solution1\Capa_Entidades\obj\Debug\Capa_Entidades.csprojResolveAssemblyReference.cache
 C:\Users\diazda\Desktop\Nueva carpeta\Daniel\Cervantes\Programacion3\Proyecto_Seguridad\Solution1\Capa_Entidades\obj\Debug\Capa_Entidades.dll
 C:\Users\diazda\Desktop\Nueva carpeta\Daniel\Cervantes\Programacion3\Proyecto_Seguridad\Solution1\Capa_Entidades\obj\Debug\Capa_Entidades.pdb
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_Entidades\bin\Debug\Capa_Entidades.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_Entidades\bin\Debug\Capa_Entidades.pdb
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_Entidades\obj\Debug\Capa_Entidades.csprojResolveAssemblyReference.cache
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_Entidades\obj\Debug\Capa_Entidades.dll
+C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_Entidades\obj\Debug\Capa_Entidades.pdb

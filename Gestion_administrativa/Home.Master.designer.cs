@@ -22,13 +22,13 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
-        /// lbl_opcionMenu control.
+        /// Lbl_nombreBienvenida control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_opcionMenu;
+        protected global::System.Web.UI.WebControls.Label Lbl_nombreBienvenida;
         
         /// <summary>
         /// form1 control.

@@ -5,187 +5,112 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <!-- Required meta tags --content="width=device-width, initial-scale=1" -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <!-- estilos personales CSS -->
-    <link href="resources/css/estilos.css" rel="stylesheet" />
-    <!-- importados fuentes y iconos CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" integrity="sha512-77kidyGDJGWWmJ0MVO0CRp+6nRgZRK67frUVBRvnL1zCcmcw9FkCQxpDHq52SebW+KWTAnnuX0Qk2/MQWogWoQ==" crossorigin="anonymous" />
-	<link rel="stylesheet" href="https://code.ionicframework.com/1.3.3/css/ionic.min.css" type="txt/css" />
-		
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+	<link rel="stylesheet" href="resources/css/style.css" />
     <title>.::Sistema::.</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-    <style>
- html, body{
-  min-height: 100%;
-  padding: 0;
-  magin: 0 ;
-  font-family: "Source Sans Pro", "Helvetica Neve", Helvetica, Arial;
- }
-
- iframe{
-  display: block;
-  overflow: auto;
-  border: 0;
-  margin: 0 auto;
-  padding: 0;
- }
-
- .frame{
-  height: 48px;
-  margin: 0;
-  padding: 0;
-  border-bottom: 1px solid #ddd;
- }
-
- .frame a{
-  color: #666;
- }
-
- .frame a:hover{
-  color: #222;
- } 
-
- .frame .buttons a{
-  height: 49px;
-  line-height: 49px;
-  display: inline-block;
-  text-align: center;
-  width: 50px;
-  border-left: 1px solid #ddd;
- }
-
- .frame .brand{
-  color: #444
-  font-size: 20px;
-  line-height: 49px;
-  display: inline-block;
-  padding-left: 10px
- }
-
- .frame .brand small{
-  font-size: 14px;
- }
-
- a, a:hover{
-  text-decoration: none;
- }
-
- .container-fluid{
-  padding: 0;
-  margin: 0;
- }
-
- .text-muted{
-  color: #999;
- }
-
- .ad{
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  backgroud: #222;
-  backgroud: rgba(0,0,0,0,8);
-  width: 100%;
-  color: #fff;
-  display: none;
- }
-
- #close-ad{
-  float: left;
-  margin-left: 10px;
-  margin-top: 10px;
-  cursor: pointer;
- }
-img.icono {
-    width: 20%;
-    height: auto;
-    padding: 0;
-    margin: 0;
-}
-</style>
-
+ 
 </head>
-<body class="bg-dark">
-      <header>
-		<!-- BEGIN CABECERA -->
-		<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-			<div class="pull-left image px-3">
-				<div>
-					<img class="rounded-circle" src="resources/images/logo_administrador.png" class="image-circle" alt="user-image" id="imagen_de_perfil" />
-				</div>
-			</div>
-		  <div class="container-fluid">
-			<a class="navbar-brand text-light" href="#">Sistema</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-			  <ul class="navbar-nav">
-				<li class="nav-item">
-				  <a class="nav-link active text-light" aria-current="page" href="#">Administración</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link active text-light" href="#">Gestión</a>
-				</li>
-			  </ul>
-			</div>
-		  </div>
-		</nav>
-		<!-- END CABECERA -->		
-	</header>	
-    
-	<div class="wrapper row-offcanvas row-offcanvas-left">
-	<aside class="left-side sidebar-offcanvas pull-left">
-		<section class="sidebar">
-			<div class="user-panel mx-2">
-				<div class=""pull-left info">
-                    <!-- Ingresar el nombre de usuario -->
-                    <p>Bienvenido usuario</p>
-                </div>                
-			</div>	
-			<div class="mx-2">
-				<a href=#>
-					<!-- Registrar Usuario -->
-					<i class="fa fa-dashboard"></i>
-					<span>Panel General</span>
-					</a>
-			</div>
-			<ul class="sidebar-menu">
-				<li class="active">
-                    <a href=#>Crear Usuario</a>
-                </li>
-				<li class="active">
-                    <a href=#>Gestionar Usuario</a>
-                </li>
-            </ul>			
-		</section>	
-	</aside>
-    </div>	
-	<aside class="right-side">
-		<section class="content-header">
-			<h1>
-				<asp:label ID="lbl_opcionMenu" runat="server" Text="Panel General"></asp:label>
-			</h1>
-		</section>
-		<section class="content">
-			<form id="form1" runat="server">
+<body class="bg-light">
+      
+<div class="wrapper">
+	
+ <nav id="sidebar">
+ 	
+ 	 <div class="sidebar-header">
+		<span>
+		    <img src="resources/images/logo_administrador.png" class="img-fluid rounded-circle mx-5 py-2" alt="Responsive image">
+		</span>
+		<span>
+ 	 	    <p class="mx-1" >Sistema de Gestión</p>
+		</span>
+        <span>
+            <!--<div class="mx-5" ="margin-left: auto; margin-right: auto; text-align: left;">-->
+                <asp:Label ID="Lbl_nombreBienvenida" runat="server" Text="Admin"></asp:Label>
+            <!--</div>-->
+ 		</span>
+ 	 </div>
+ 	 <ul class="lisst-unstyled components">
+
+ 	 	<!--<p>Menu<-->
+ 	 	<li class="active">
+ 	 		<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administrar</a>
+ 	 	  <ul class="collapse list-unstyled" id="homeSubmenu">
+ 	 	  	<li>
+ 	 	  		<a href="RegistroDeUsuario.aspx">Generar Usuario</a>
+ 	 	  	</li>
+ 	 	  	<li>
+ 	 	  		<a href="#">Gestionar Usuario</a>
+ 	 	  	</li>
+
+ 	 	  </ul>
+ 	 	</li>
+ 	 	<li>
+ 	 		<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+ 	 		<ul class="collapse list-unstyled" id="pageSubmenu">
+ 	 			<li>
+ 	 				<a href="#">Ejemplo 1</a>
+ 	 			</li>
+ 	 			<li>
+ 	 				<a href="#">Ejemplo 2</a>
+ 	 			</li>
+ 	 			
+
+ 	 		</ul>
+ 	 	</li>
+         <li>
+ 	 		<a href="#">Contactanos</a>
+ 	 	</li>
+
+ 	 </ul>
+ </nav>
+
+
+<div id="content">
+	
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  	<div class="container-fluid">
+  		<button type="button" id="sidebarCollapse" class="btn  btn-info">
+  			<i class="fas fa-align-left"></i>
+  			<span>Opciones</span>
+  			
+  		</button>
+  	</div>
+  	  </nav>
+
+<br><br>
+    <form id="form1" runat="server">
 				<div>
 					<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 					
 					</asp:ContentPlaceHolder>
 				</div>
-			</form>		
-		</section>		
-	</aside>
-        
+	</form>		
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+
+</script>
+
+       
+
 </body>
 </html>

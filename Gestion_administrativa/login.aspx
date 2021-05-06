@@ -5,11 +5,11 @@
 <html class="bg-dark" xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <!-- Required meta tags --content="width=device-width, initial-scale=1" -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
     <!-- estilos personales CSS -->
     <link href="resources/css/estilos.css" rel="stylesheet" />
 
@@ -25,7 +25,7 @@
                     <asp:TextBox ID="txt_usuario" runat="server" CssClass="form-control" placeholder="Ingrese Usuario"></asp:TextBox>
                 </div>
                 <div class="form-group mx-2 py-2">
-                    <asp:TextBox ID="txt_contrasena" runat="server" CssClass="form-control" placeholder="Ingrese Clave"></asp:TextBox>
+                    <asp:TextBox ID="txt_contrasena" runat="server" TextMode="Password" CssClass="form-control" placeholder="Ingrese Clave"></asp:TextBox>
                 </div>   
             </div>
             <div class="form-group mx-2 py-2">
