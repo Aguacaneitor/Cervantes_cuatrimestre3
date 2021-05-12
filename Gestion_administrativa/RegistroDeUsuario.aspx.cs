@@ -76,5 +76,10 @@ namespace Gestion_administrativa
                 Response.Write("<script>alert('Fecha ingresada es invalida')</script>");
             } */        
         }
-    }
+
+        protected void btn_registrar_Click(object sender, EventArgs e)
+        {
+
+        }
+    } 
 }

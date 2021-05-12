@@ -99,6 +99,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Home.Master" />
+    <Content Include="GestionDeEventos.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -148,6 +149,13 @@
     </Compile>
     <Compile Include="RegistroDeUsuario.aspx.designer.cs">
       <DependentUpon>RegistroDeUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionDeEventos.aspx.cs">
+      <DependentUpon>GestionDeEventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionDeEventos.aspx.designer.cs">
+      <DependentUpon>GestionDeEventos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

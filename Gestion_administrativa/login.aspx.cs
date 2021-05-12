@@ -26,7 +26,8 @@ namespace Gestion_administrativa
             if (o_usuario != null)
             {
                 Response.Write("<script>alert('Usuario Correcto')</script>");
-                Response.Redirect("PanelGeneral.aspx");
+                string nombre = o_usuario.usu_Ape +", "+ o_usuario.usu_Nom;
+                Response.Redirect("PanelGeneral.aspx?nombre="+nombre+"&perfil="+ o_usuario.o_rol.rol_descripcion);
             }
             else
             {

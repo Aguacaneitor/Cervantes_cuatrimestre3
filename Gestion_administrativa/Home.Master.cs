@@ -12,6 +12,14 @@ namespace Gestion_administrativa
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Request.QueryString["nombre"] != null)
+            {
+                Lbl_nombreBienvenida.Text = Request.QueryString["nombre"];
+            }
+            else
+            {
+                Lbl_nombreBienvenida.Text = "Usuario";
+            }                
         }
     }
 }

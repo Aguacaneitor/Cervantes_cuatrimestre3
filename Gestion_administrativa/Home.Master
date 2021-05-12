@@ -47,22 +47,20 @@
  	 	  		<a href="RegistroDeUsuario.aspx">Generar Usuario</a>
  	 	  	</li>
  	 	  	<li>
- 	 	  		<a href="#">Gestionar Usuario</a>
+ 	 	  		<a href="#">Gestión de Usuario</a>
  	 	  	</li>
 
  	 	  </ul>
  	 	</li>
  	 	<li>
- 	 		<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+ 	 		<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestionar</a>
  	 		<ul class="collapse list-unstyled" id="pageSubmenu">
  	 			<li>
- 	 				<a href="#">Ejemplo 1</a>
+ 	 				<a href="GestionDeEventos.aspx">Eventos</a>
  	 			</li>
  	 			<li>
  	 				<a href="#">Ejemplo 2</a>
  	 			</li>
- 	 			
-
  	 		</ul>
  	 	</li>
          <li>
