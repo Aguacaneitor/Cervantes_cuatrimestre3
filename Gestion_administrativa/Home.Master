@@ -44,29 +44,33 @@
  	 		<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administrar</a>
  	 	  <ul class="collapse list-unstyled" id="homeSubmenu">
  	 	  	<li>
- 	 	  		<a href="RegistroDeUsuario.aspx">Generar Usuario</a>
+ 	 	  		<a href="RegistroDeUsuario.aspx<%= usuario_conectado %>">Generar Usuario</a>
  	 	  	</li>
- 	 	  	<li>
- 	 	  		<a href="#">Gestión de Usuario</a>
+ 	 	  	<!--<li>
+ 	 	  		<a href="GestionDeRol.aspx">Gestionar Roles</a>
+ 	 	  	</li>-->
+            <li>
+ 	 	  		<a href="RegistroDeDomicilio.aspx<%= usuario_conectado %>"">Gestionar Domicilios</a>
  	 	  	</li>
-
+            <li>
+ 	 	  		<a href="#">Gestionar Contactos</a>
+ 	 	  	</li>
  	 	  </ul>
  	 	</li>
  	 	<li>
  	 		<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestionar</a>
- 	 		<ul class="collapse list-unstyled" id="pageSubmenu">
- 	 			<li>
- 	 				<a href="GestionDeEventos.aspx">Eventos</a>
- 	 			</li>
- 	 			<li>
- 	 				<a href="#">Ejemplo 2</a>
- 	 			</li>
- 	 		</ul>
+ 	 		    <ul class="collapse list-unstyled" id="pageSubmenu">
+ 	 			    <li>
+ 	 				    <a href="GestionDeEventos.aspx<%= usuario_conectado %>"">Eventos</a>
+ 	 			    </li>
+ 	 			    <li>
+ 	 				    <a href="#">Ejemplo 2</a>
+ 	 			    </li>
+ 	 		    </ul>
  	 	</li>
-         <li>
+        <li>
  	 		<a href="#">Contactanos</a>
  	 	</li>
-
  	 </ul>
  </nav>
 

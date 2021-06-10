@@ -40,6 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Barrio.cs" />
+    <Compile Include="Direccion.cs" />
+    <Compile Include="Localidad.cs" />
+    <Compile Include="Provincia.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

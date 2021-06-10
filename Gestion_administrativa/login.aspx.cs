@@ -27,7 +27,7 @@ namespace Gestion_administrativa
             {
                 Response.Write("<script>alert('Usuario Correcto')</script>");
                 string nombre = o_usuario.usu_Ape +", "+ o_usuario.usu_Nom;
-                Response.Redirect("PanelGeneral.aspx?nombre="+nombre+"&perfil="+ o_usuario.o_rol.rol_descripcion);
+                Response.Redirect("PanelGeneral.aspx?nombre="+nombre+"&perfil="+ o_usuario.o_rol.rol_descripcion+"&editor="+ o_usuario.usuario);
             }
             else
             {

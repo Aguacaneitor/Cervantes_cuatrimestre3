@@ -12,3 +12,10 @@ C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_AccesoDato
 C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_AccesoDatos\obj\Debug\Capa_AccesoDatos.csprojResolveAssemblyReference.cache
 C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_AccesoDatos\obj\Debug\Capa_AccesoDatos.dll
 C:\Users\diazda\Desktop\resources\images\Cervantes_cuatrimestre3\Capa_AccesoDatos\obj\Debug\Capa_AccesoDatos.pdb
+C:\Users\diazda.AR\Desktop\Daniel\Cervantes\proyecto_integerador\Cervantes_cuatrimestre3\Capa_AccesoDatos\bin\Debug\Capa_AccesoDatos.dll
+C:\Users\diazda.AR\Desktop\Daniel\Cervantes\proyecto_integerador\Cervantes_cuatrimestre3\Capa_AccesoDatos\bin\Debug\Capa_AccesoDatos.pdb
+C:\Users\diazda.AR\Desktop\Daniel\Cervantes\proyecto_integerador\Cervantes_cuatrimestre3\Capa_AccesoDatos\bin\Debug\Capa_Entidades.dll
+C:\Users\diazda.AR\Desktop\Daniel\Cervantes\proyecto_integerador\Cervantes_cuatrimestre3\Capa_AccesoDatos\bin\Debug\Capa_Entidades.pdb
+C:\Users\diazda.AR\Desktop\Daniel\Cervantes\proyecto_integerador\Cervantes_cuatrimestre3\Capa_AccesoDatos\obj\Debug\Capa_AccesoDatos.csprojResolveAssemblyReference.cache
+C:\Users\diazda.AR\Desktop\Daniel\Cervantes\proyecto_integerador\Cervantes_cuatrimestre3\Capa_AccesoDatos\obj\Debug\Capa_AccesoDatos.dll
+C:\Users\diazda.AR\Desktop\Daniel\Cervantes\proyecto_integerador\Cervantes_cuatrimestre3\Capa_AccesoDatos\obj\Debug\Capa_AccesoDatos.pdb

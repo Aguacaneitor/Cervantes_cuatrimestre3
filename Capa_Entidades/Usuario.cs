@@ -14,7 +14,7 @@ namespace Capa_Entidades
         public string usu_Ape { get; set; }
         public string usu_pass { get; set; }
         public DateTime fec_nac { get; set; }
-        public Int32 usu_tipodoc { get; set; }
+        public string usu_tipodoc { get; set; }
         public string usu_nomdoc { get; set; }
         public string usu_calle { get; set; }
         public Int32 usu_altura { get; set; }
@@ -29,8 +29,9 @@ namespace Capa_Entidades
         public string usu_alta { get; set; }
         public DateTime usu_fecalta { get; set; }
         public string usu_modi { get; set; }
-        public string usu_fecmodi { get; set; }
+        public DateTime usu_fecmodi { get; set; }
         public Rol o_rol { get; set; }
+        public bool estado_usuario { get; set; }
 
     }
 }

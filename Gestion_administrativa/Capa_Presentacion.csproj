@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GestionDeRol.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -109,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PanelGeneral.aspx" />
+    <Content Include="RegistroDeDomicilio.aspx" />
     <Content Include="RegistroDeUsuario.aspx" />
     <Content Include="resources\css\estilos.css" />
     <Content Include="resources\css\style.css" />
@@ -116,11 +118,19 @@
     <Content Include="resources\images\logo_administrador.png" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="scripts\credenciales.js" />
     <Content Include="scripts\validaciones.js" />
     <Content Include="Web.config" />
     <Content Include="login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionDeRol.aspx.cs">
+      <DependentUpon>GestionDeRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionDeRol.aspx.designer.cs">
+      <DependentUpon>GestionDeRol.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -142,6 +152,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroDeDomicilio.aspx.cs">
+      <DependentUpon>RegistroDeDomicilio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroDeDomicilio.aspx.designer.cs">
+      <DependentUpon>RegistroDeDomicilio.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistroDeUsuario.aspx.cs">
       <DependentUpon>RegistroDeUsuario.aspx</DependentUpon>

@@ -69,5 +69,43 @@ namespace Capa_AccesoDatos
 
         }
 
+        public void RegistrarUsuarioAD(Usuario o_usuario)
+        {
+            SqlConnection conexion = null;
+            SqlCommand cmd = null;
+            SqlDataReader rd = null;
+            try
+            {
+                conexion = Conexion.getInstance().ConexionBD();
+                cmd = new SqlCommand("spAccesoSistema", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.AddWithValue("@prmUser", usuario);
+                //cmd.Parameters.AddWithValue("@prmPass", contrasena);
+                conexion.Open();
+                rd = cmd.ExecuteReader();
+                if (rd.Read())
+                {
+                    o_usuario = new Usuario();
+                    o_usuario.usu_id = Convert.ToInt32(rd["usu_id"].ToString());
+                    o_usuario.usuario = rd["usuario"].ToString();
+                    o_usuario.usu_pass = rd["usu_pass"].ToString();
+                    o_usuario.usu_Ape = rd["usu_Ape"].ToString();
+                    o_usuario.usu_Nom = rd["usu_Nom"].ToString();
+                    Rol o_rolTemp = new Rol();
+                    o_rolTemp.rol_id = Convert.ToInt32(rd["rol_id"].ToString());
+                    o_rolTemp.rol_descripcion = rd["rol_descripcion"].ToString();
+                    o_usuario.o_rol = o_rolTemp;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
     }
 }

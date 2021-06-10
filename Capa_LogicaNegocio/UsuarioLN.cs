@@ -36,5 +36,10 @@ namespace Capa_LogicaNegocio
             
 
         }
+
+        public void RegistroUsuario(Usuario o_usuario)
+        {
+            UsuarioAD.getInstance().RegistrarUsuarioAD(o_usuario);
+        }
     }
 }

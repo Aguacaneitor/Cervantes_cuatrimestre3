@@ -13,6 +13,15 @@ namespace Gestion_administrativa {
     public partial class RegistroDeUsuario {
         
         /// <summary>
+        /// drp_tipodoc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drp_tipodoc;
+        
+        /// <summary>
         /// txt_usu_nomdoc control.
         /// </summary>
         /// <remarks>
@@ -49,13 +58,13 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.TextBox txt_fecha_nacimiento;
         
         /// <summary>
-        /// drp_agno control.
+        /// drp_dia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drp_agno;
+        protected global::System.Web.UI.WebControls.DropDownList drp_dia;
         
         /// <summary>
         /// drp_mes control.
@@ -67,13 +76,13 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.DropDownList drp_mes;
         
         /// <summary>
-        /// drp_dia control.
+        /// drp_agno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drp_dia;
+        protected global::System.Web.UI.WebControls.DropDownList drp_agno;
         
         /// <summary>
         /// btn_fecha control.
@@ -83,6 +92,15 @@ namespace Gestion_administrativa {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_fecha;
+        
+        /// <summary>
+        /// txt_usu_email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_usu_email;
         
         /// <summary>
         /// txt_usuario control.
@@ -103,6 +121,15 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.TextBox txt_usu_pass;
         
         /// <summary>
+        /// lb_rol control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList lb_rol;
+        
+        /// <summary>
         /// txt_rol control.
         /// </summary>
         /// <remarks>
@@ -110,69 +137,6 @@ namespace Gestion_administrativa {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_rol;
-        
-        /// <summary>
-        /// txt_localidad control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_localidad;
-        
-        /// <summary>
-        /// txt_barrio control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_barrio;
-        
-        /// <summary>
-        /// txt_usu_calle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_calle;
-        
-        /// <summary>
-        /// txt_usu_altura control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_altura;
-        
-        /// <summary>
-        /// txt_usu_piso control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_piso;
-        
-        /// <summary>
-        /// txt_usu_dpto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_dpto;
-        
-        /// <summary>
-        /// txt_usu_CP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_CP;
         
         /// <summary>
         /// txt_usu_telefono control.
@@ -193,13 +157,13 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.TextBox txt_usu_celular;
         
         /// <summary>
-        /// txt_usu_email control.
+        /// txt_usu_email_Temp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_email;
+        protected global::System.Web.UI.WebControls.TextBox txt_usu_email_Temp;
         
         /// <summary>
         /// btn_registrar control.
