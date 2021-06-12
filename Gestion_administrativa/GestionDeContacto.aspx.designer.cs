@@ -10,7 +10,7 @@
 namespace Gestion_administrativa {
     
     
-    public partial class RegistroDeDomicilio {
+    public partial class GestionDeContacto {
         
         /// <summary>
         /// txt_usuario_buscado control.
@@ -31,13 +31,13 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.Button btn_buscar_usuario;
         
         /// <summary>
-        /// dpl_domicilio control.
+        /// dpl_contacto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dpl_domicilio;
+        protected global::System.Web.UI.WebControls.DropDownList dpl_contacto;
         
         /// <summary>
         /// gv_direcciones control.
@@ -49,76 +49,49 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.GridView gv_direcciones;
         
         /// <summary>
-        /// dpl_provincia control.
+        /// dpl_codigoarea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dpl_provincia;
+        protected global::System.Web.UI.WebControls.DropDownList dpl_codigoarea;
         
         /// <summary>
-        /// dpl_localidad control.
+        /// txt_nro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dpl_localidad;
+        protected global::System.Web.UI.WebControls.TextBox txt_nro;
         
         /// <summary>
-        /// txt_barrio control.
+        /// rb_movil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_barrio;
+        protected global::System.Web.UI.WebControls.RadioButton rb_movil;
         
         /// <summary>
-        /// txt_usu_calle control.
+        /// rb_fijo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_calle;
+        protected global::System.Web.UI.WebControls.RadioButton rb_fijo;
         
         /// <summary>
-        /// txt_usu_altura control.
+        /// dpl_prioridad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_altura;
-        
-        /// <summary>
-        /// txt_usu_piso control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_piso;
-        
-        /// <summary>
-        /// txt_usu_dpto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_dpto;
-        
-        /// <summary>
-        /// txt_usu_CP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_CP;
+        protected global::System.Web.UI.WebControls.DropDownList dpl_prioridad;
         
         /// <summary>
         /// btn_registrar control.

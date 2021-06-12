@@ -26,6 +26,10 @@ namespace Gestion_administrativa
             {
                 dpl_domicilio.Items.Add("Ingrese y busque un usuario para editar.");
             }
+            dpl_provincia.Items.Clear();
+            dpl_localidad.Items.Clear();
+            dpl_provincia.Items.Add("Seleccione provincia.");
+            dpl_localidad.Items.Add("Seleccione localidad.");
         }
 
         protected void btn_buscar_usuario_Click(object sender, EventArgs e)
@@ -80,7 +84,8 @@ namespace Gestion_administrativa
                 }
                 if (o_direccion != null)
                 {
-                    txt_localidad.Text = o_direccion.dir_localidad.loc_nombre;
+                    dpl_provincia.SelectedValue = o_direccion.dir_localidad.loc_provincia.provincia_nombre;
+                    dpl_localidad.SelectedValue = o_direccion.dir_localidad.loc_nombre;
                     txt_barrio.Text = o_direccion.dir_barrio.barrio_nombre;
                     txt_usu_calle.Text = o_direccion.dir_calle;
                     txt_usu_altura.Text = "" + o_direccion.dir_altura;
@@ -94,7 +99,8 @@ namespace Gestion_administrativa
             catch (Exception ex)
             {
                 btn_registrar.Text = "Registrar";
-                txt_localidad.Text = "";
+                dpl_provincia.SelectedValue = "Seleccione provincia.";
+                dpl_localidad.SelectedValue = "Seleccione localidad.";
                 txt_barrio.Text = "";
                 txt_usu_calle.Text = "";
                 txt_usu_altura.Text = "";
@@ -102,6 +108,16 @@ namespace Gestion_administrativa
                 txt_usu_dpto.Text = "";
                 txt_usu_CP.Text = "";
             }
+        }
+
+        protected void btn_registrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_cancelar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

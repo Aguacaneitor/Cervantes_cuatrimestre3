@@ -64,10 +64,17 @@
         <div class="container bg-white border-top border-3">
             <h2>DATOS DE DOMICILIO</h2>
                         <div class="form-group">
+                               <label>PROVINCIA</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:DropDownList ID="dpl_provincia" runat="server" CssClass="form-control"></asp:DropDownList>
+                        </div>
+
+                        <div class="form-group">
                                <label>LOCALIDAD</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txt_localidad" runat="server" Text="" CssClass="form-control"></asp:TextBox>
+                            <asp:DropDownList ID="dpl_localidad" runat="server" CssClass="form-control"></asp:DropDownList>
                         </div>
 
                         <div class="form-group">
@@ -112,11 +119,11 @@
             <table align="center">
                 <tr>
                     <td>
-                        <asp:Button ID="btn_registrar" runat="server" Text="REGISTRAR" CssClass="btn btn-primary" ClientIDMode="static"/>
+                        <asp:Button ID="btn_registrar" runat="server" Text="REGISTRAR" CssClass="btn btn-primary" ClientIDMode="static" OnClick="btn_registrar_Click"/>
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>
-                        <asp:Button ID="btn_cancelar" runat="server" Text="CANCELAR" CssClass="btn btn-danger" ClientIDMode="static"/>
+                        <asp:Button ID="btn_cancelar" runat="server" Text="CANCELAR" CssClass="btn btn-danger" ClientIDMode="static" OnClick="btn_cancelar_Click"/>
                     </td>
                 </tr>
             </table>

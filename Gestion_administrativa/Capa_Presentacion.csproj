@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GestionDeContacto.aspx" />
     <Content Include="GestionDeRol.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -124,6 +125,13 @@
     <Content Include="login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionDeContacto.aspx.cs">
+      <DependentUpon>GestionDeContacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionDeContacto.aspx.designer.cs">
+      <DependentUpon>GestionDeContacto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GestionDeRol.aspx.cs">
       <DependentUpon>GestionDeRol.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

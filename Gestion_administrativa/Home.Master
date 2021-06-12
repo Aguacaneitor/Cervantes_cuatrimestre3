@@ -50,10 +50,10 @@
  	 	  		<a href="GestionDeRol.aspx">Gestionar Roles</a>
  	 	  	</li>-->
             <li>
- 	 	  		<a href="RegistroDeDomicilio.aspx<%= usuario_conectado %>"">Gestionar Domicilios</a>
+ 	 	  		<a href="RegistroDeDomicilio.aspx<%= usuario_conectado %>">Gestionar Domicilios</a>
  	 	  	</li>
             <li>
- 	 	  		<a href="#">Gestionar Contactos</a>
+ 	 	  		<a href="GestionDeContacto.aspx<%= usuario_conectado %>">Gestionar Contactos</a>
  	 	  	</li>
  	 	  </ul>
  	 	</li>
