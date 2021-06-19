@@ -42,7 +42,7 @@ namespace Capa_AccesoDatos
                 //if (rd.Read())
                 //{
                 while (rd.Read())
-                {
+                {          
                     var myString = rd.GetString(0); //The 0 stands for "the 0'th column", so the first column of the result.
                                                     // Do somthing with this rows string, for example to put them in to a list
                     roles.Add(myString);

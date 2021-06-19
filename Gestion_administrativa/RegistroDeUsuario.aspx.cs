@@ -222,5 +222,10 @@ namespace Gestion_administrativa
                 return false;
             }
         }
+
+        protected void btn_cancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     } 
 }
