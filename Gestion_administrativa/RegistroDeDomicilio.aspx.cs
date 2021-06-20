@@ -51,20 +51,27 @@ namespace Gestion_administrativa
             else
             {
                 direcciones_almacenadas = direcciones;
-                dpl_domicilio.Items.Add("Seleccione domicilio a editar.");
-                foreach (Direccion direccion in direcciones)
+                if (direcciones.Count > 0)
                 {
-                    string domicilio_formateado = direccion.dir_id+": ";
-                    domicilio_formateado += direccion.usu_CP;
-                    domicilio_formateado += domicilio_formateado == "" ? direccion.dir_localidad.loc_provincia.provincia_nombre : " " + direccion.dir_localidad.loc_provincia.provincia_nombre;
-                    domicilio_formateado += domicilio_formateado == "" ? direccion.dir_localidad.loc_nombre : ", " + direccion.dir_localidad.loc_nombre;
-                    domicilio_formateado += domicilio_formateado == "" ? direccion.dir_barrio.barrio_nombre : " " + direccion.dir_barrio.barrio_nombre;
-                    domicilio_formateado += domicilio_formateado == "" ? direccion.dir_calle : ", " + direccion.dir_calle;
-                    domicilio_formateado += domicilio_formateado == "" ? "" + direccion.dir_altura : " " + direccion.dir_altura;
-                    domicilio_formateado += domicilio_formateado == "" ? direccion.dir_piso : " " + direccion.dir_piso;
-                    domicilio_formateado += domicilio_formateado == "" ? direccion.dir_dpto : " " + direccion.dir_dpto;
-                    dpl_domicilio.Items.Add(domicilio_formateado);
+                    dpl_domicilio.Items.Add("Seleccione domicilio a editar.");
+                    foreach (Direccion direccion in direcciones)
+                    {
+                        string domicilio_formateado = direccion.dir_id + ": ";
+                        domicilio_formateado += direccion.usu_CP;
+                        domicilio_formateado += domicilio_formateado == "" ? direccion.dir_localidad.loc_provincia.provincia_nombre : " " + direccion.dir_localidad.loc_provincia.provincia_nombre;
+                        domicilio_formateado += domicilio_formateado == "" ? direccion.dir_localidad.loc_nombre : ", " + direccion.dir_localidad.loc_nombre;
+                        domicilio_formateado += domicilio_formateado == "" ? direccion.dir_barrio.barrio_nombre : " " + direccion.dir_barrio.barrio_nombre;
+                        domicilio_formateado += domicilio_formateado == "" ? direccion.dir_calle : ", " + direccion.dir_calle;
+                        domicilio_formateado += domicilio_formateado == "" ? "" + direccion.dir_altura : " " + direccion.dir_altura;
+                        domicilio_formateado += domicilio_formateado == "" ? direccion.dir_piso : " " + direccion.dir_piso;
+                        domicilio_formateado += domicilio_formateado == "" ? direccion.dir_dpto : " " + direccion.dir_dpto;
+                        dpl_domicilio.Items.Add(domicilio_formateado);
+                    }
                 }
+                else
+                {
+                    dpl_domicilio.Items.Add("Registre el primer domicilio de " + txt_usuario_buscado.Text + ".");
+                }                
             }
         }
 

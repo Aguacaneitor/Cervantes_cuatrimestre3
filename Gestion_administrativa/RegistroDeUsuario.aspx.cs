@@ -166,38 +166,44 @@ namespace Gestion_administrativa
                     {
                         txt_salida += "El usuario ingresado no esta disponible.";
                     }
+                }
+                if (txt_salida != "")
+                {
+                    Response.Write("<script>alert('" + txt_salida + "')</script>");
+                }
+                else
+                {
+                    //Response.Write("<script>alert('Debe terminar el registro o el usuario quedara inactivo.')</script>");
+                    Usuario o_usuario = new Usuario();
+                    Rol o_usu_rol = new Rol();
+                    o_usuario.usuario = txt_usuario.Text;
+                    o_usuario.usu_pass = txt_usu_pass.Text;
+                    o_usuario.usu_nomdoc = txt_usu_nomdoc.Text;
+                    o_usuario.usu_Ape = txt_usu_Ape.Text;
+                    o_usuario.usu_Nom = txt_usu_Nom.Text;
+                    o_usu_rol.rol_descripcion = lb_rol.SelectedValue;
+                    o_usuario.o_rol = o_usu_rol;
+                    o_usuario.usu_email = txt_usu_email.Text;
+                    o_usuario.usu_tipodoc = drp_tipodoc.SelectedValue;
+                    o_usuario.fec_nac = DateTime.Parse(agno + "-" + mes_f + "-" + dia_f);
+                    o_usuario.usu_alta = Request.QueryString["editor"] != null ? Request.QueryString["editor"] : "default";
+                    o_usuario.usu_fecalta = DateTime.Now;
+                    registrar_usuario(o_usuario);
+                    string parametros;
+                    if (Request.QueryString["nombre"] != null)
+                    {
+                        //usuario_conectado = Request.QueryString["usuario"];
+                        parametros = "?nombre=" + Request.QueryString["nombre"] + "&perfil=" + Request.QueryString["perfil"] + "&editor=" + Request.QueryString["usuario"];
+                    }
                     else
                     {
-                        //Response.Write("<script>alert('Debe terminar el registro o el usuario quedara inactivo.')</script>");
-                        /* Usuario o_usuario = new Usuario();
-                         o_usuario.usuario = txt_usuario.Text;
-                         o_usuario.usu_pass = txt_usu_pass.Text;
-                         o_usuario.usu_nomdoc = txt_usu_nomdoc.Text;
-                         o_usuario.usu_Ape = txt_usu_Ape.Text;
-                         o_usuario.usu_Nom = txt_usu_Nom.Text;
-                         o_usuario.o_rol.rol_descripcion = drp_tipodoc.SelectedValue;
-                         o_usuario.usu_email = txt_usu_email.Text;
-                         o_usuario.usu_tipodoc = drp_tipodoc.SelectedValue;
-                         o_usuario.fec_nac = DateTime.Parse(agno + "-" + mes_f + "-" + dia_f);
-                         registrar_usuario(o_usuario);*/
-                        string parametros;
-                        if (Request.QueryString["nombre"] != null)
-                        {
-                            //usuario_conectado = Request.QueryString["usuario"];
-                            parametros = "?nombre=" + Request.QueryString["nombre"] + "&perfil=" + Request.QueryString["perfil"] + "&editor=" + Request.QueryString["usuario"];
-                        }
-                        else
-                        {
-                            parametros = "Usuario";
-                        }
-                        Response.Redirect("RegistroDeDomicilio.aspx"+ parametros + "&usuario_r=" + txt_usuario.Text+"&nombre_r="+ txt_usu_Nom.Text);
+                        parametros = "Usuario";
                     }
-                    if (txt_salida != "")
-                    {
-                        Response.Write("<script>alert('" + txt_salida + "')</script>");
-                    }                        
+                    Response.Redirect("RegistroDeDomicilio.aspx" + parametros + "&usuario_r=" + txt_usuario.Text + "&nombre_r=" + txt_usu_Nom.Text);
                 }
-            } else
+                
+            }
+            else
             {
                 Response.Write("<script>alert('Campos erroneamente cargados: "+ txt_salida + "')</script>");
             }

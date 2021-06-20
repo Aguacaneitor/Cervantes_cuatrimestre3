@@ -88,5 +88,45 @@ BEGIN
 	FROM dbo.Usuarios AS US
 	LEFT JOIN dbo.roles AS RL
 	ON  US.rol_id = RL.rol_id
+END;
 
+CREATE PROCEDURE [dbo].[spRegistroUsuario]
+(@prmUser Varchar(50),
+@prmNombre Varchar(50),
+@prmApellido Varchar(50),
+@prmPass Varchar(50),
+@prmFechaNacimiento datetime,
+@prmTipoDocumento Varchar(10),
+@prmDocumento int,
+@prmEmail Varchar(50),
+@prmUserAlta Varchar(50),
+@prmFechaAlta datetime
+) AS
+BEGIN
+	INSERT INTO [Emp_Seguridad].[dbo].[Usuarios] 
+		([usuario]
+		  ,[usu_Nom]
+		  ,[usu_Ape]
+		  ,[usu_pass]
+		  ,[fec_nac]
+		  ,[usu_tipodoc]
+		  ,[usu_nomdoc]
+		  ,[usu_email]
+		  ,[usu_alta]
+		  ,[usu_fecalta]
+		  ,[estado_usuario])
+	VALUES
+		(
+		@prmUser,
+		@prmNombre,
+		@prmApellido,
+		@prmPass,
+		@prmFechaNacimiento,
+		@prmTipoDocumento,
+		@prmDocumento,
+		@prmEmail,
+		@prmUserAlta,
+		@prmFechaAlta,
+		CAST(0 AS BIT)
+		)
 END

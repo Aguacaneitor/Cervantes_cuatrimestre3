@@ -18,7 +18,7 @@ namespace Gestion_administrativa
             {
                 Lbl_nombreBienvenida.Text = Request.QueryString["nombre"];
                 //usuario_conectado = Request.QueryString["usuario"];
-                usuario_conectado = "?nombre=" + Request.QueryString["nombre"] + "&perfil=" + Request.QueryString["perfil"] + "&editor=" + Request.QueryString["usuario"];
+                usuario_conectado = "?nombre=" + Request.QueryString["nombre"] + "&perfil=" + Request.QueryString["perfil"] + "&editor=" + Request.QueryString["editor"];
             }
             else
             {
