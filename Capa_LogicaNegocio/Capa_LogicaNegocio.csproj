@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DireccionesFiltradasLN.cs" />
+    <Compile Include="cbDireccionesListaLN.cs" />
+    <Compile Include="DireccionesLN.cs" />
     <Compile Include="RolesListaLN.cs" />
+    <Compile Include="TelefonosLN.cs" />
     <Compile Include="UsuarioLN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="usuariosListaLN.cs" />

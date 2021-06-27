@@ -10,6 +10,7 @@ namespace Capa_Entidades
     {
         public Int32 barrio_id { get; set; }
         public string barrio_nombre { get; set; }
+        public Localidad barrio_localidad { get; set; }
 
         public Barrio() { }
 

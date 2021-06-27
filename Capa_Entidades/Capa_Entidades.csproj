@@ -45,6 +45,7 @@
     <Compile Include="Localidad.cs" />
     <Compile Include="Provincia.cs" />
     <Compile Include="Rol.cs" />
+    <Compile Include="Telefono.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -13,6 +13,24 @@ namespace Gestion_administrativa {
     public partial class RegistroDeUsuario {
         
         /// <summary>
+        /// txt_usuario_buscado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_usuario_buscado;
+        
+        /// <summary>
+        /// btn_buscar_usuario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_buscar_usuario;
+        
+        /// <summary>
         /// drp_tipodoc control.
         /// </summary>
         /// <remarks>
@@ -64,7 +82,7 @@ namespace Gestion_administrativa {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drp_dia;
+        protected global::System.Web.UI.WebControls.TextBox drp_dia;
         
         /// <summary>
         /// drp_mes control.
@@ -73,7 +91,7 @@ namespace Gestion_administrativa {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drp_mes;
+        protected global::System.Web.UI.WebControls.TextBox drp_mes;
         
         /// <summary>
         /// drp_agno control.
@@ -82,16 +100,7 @@ namespace Gestion_administrativa {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drp_agno;
-        
-        /// <summary>
-        /// btn_fecha control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_fecha;
+        protected global::System.Web.UI.WebControls.TextBox drp_agno;
         
         /// <summary>
         /// txt_usu_email control.
@@ -130,42 +139,6 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.DropDownList lb_rol;
         
         /// <summary>
-        /// txt_rol control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_rol;
-        
-        /// <summary>
-        /// txt_usu_telefono control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_telefono;
-        
-        /// <summary>
-        /// txt_usu_celular control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_celular;
-        
-        /// <summary>
-        /// txt_usu_email_Temp control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu_email_Temp;
-        
-        /// <summary>
         /// btn_registrar control.
         /// </summary>
         /// <remarks>
@@ -173,6 +146,15 @@ namespace Gestion_administrativa {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_registrar;
+        
+        /// <summary>
+        /// btn_eliminar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_eliminar;
         
         /// <summary>
         /// btn_cancelar control.

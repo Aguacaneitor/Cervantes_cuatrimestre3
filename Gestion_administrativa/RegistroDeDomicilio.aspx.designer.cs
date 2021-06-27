@@ -49,33 +49,6 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.GridView gv_direcciones;
         
         /// <summary>
-        /// dpl_provincia control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dpl_provincia;
-        
-        /// <summary>
-        /// dpl_localidad control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dpl_localidad;
-        
-        /// <summary>
-        /// txt_barrio control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_barrio;
-        
-        /// <summary>
         /// txt_usu_calle control.
         /// </summary>
         /// <remarks>
@@ -92,6 +65,24 @@ namespace Gestion_administrativa {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_usu_altura;
+        
+        /// <summary>
+        /// txt_usu_manzana control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_usu_manzana;
+        
+        /// <summary>
+        /// txt_usu_torre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_usu_torre;
         
         /// <summary>
         /// txt_usu_piso control.
@@ -112,6 +103,33 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.TextBox txt_usu_dpto;
         
         /// <summary>
+        /// dpl_provincia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dpl_provincia;
+        
+        /// <summary>
+        /// dpl_localidad control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dpl_localidad;
+        
+        /// <summary>
+        /// dpl_barrio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dpl_barrio;
+        
+        /// <summary>
         /// txt_usu_CP control.
         /// </summary>
         /// <remarks>
@@ -128,6 +146,15 @@ namespace Gestion_administrativa {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_registrar;
+        
+        /// <summary>
+        /// btn_eliminar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_eliminar;
         
         /// <summary>
         /// btn_cancelar control.

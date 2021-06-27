@@ -22,7 +22,7 @@
                                 <asp:textbox ID="txt_usuario_buscado" runat="server" CssClass="form-control"></asp:textbox>
                             </td>
                             <td class="align-top">
-                                <asp:Button ID="btn_buscar_usuario" runat="server" Text="Buscar" CssClass="btn btn-info form-control"/>
+                                <asp:Button ID="btn_buscar_usuario" runat="server" Text="Buscar" CssClass="btn btn-info form-control" OnClick="btn_buscar_usuario_Click"/>
                             </td>
                         </tr>
                     </tbody>
@@ -40,33 +40,36 @@
                                 <h3>Contacto:</h3>
                             </td>
                             <td class="align-top">
-                                <asp:DropDownList ID="dpl_contacto" runat="server" AutoPostBack="True" CssClass="form-control"></asp:DropDownList>
+                                <asp:DropDownList ID="dpl_contacto" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="dpl_contacto_SelectedIndexChanged"></asp:DropDownList>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <asp:GridView ID="gv_direcciones" runat="server" AutoGenerateColumns="false">
+        </div>
+    </div>
+     <div class="row">
+        <div class="container bg-white border-top border-3 align-Center">
+            <asp:GridView ID="gv_telefonos" runat="server" AutoGenerateColumns="false">
                 <HeaderStyle HorizontalAlign="Center" />
                 <Columns>
-                    <asp:BoundField DataField="tel_tipo" HeaderText="Tipo" ItemStyle-Width="20%" ItemStyle-HorizontalAlign="Center"/>
-                    <asp:BoundField DataField="tel_nro" HeaderText="Número"  ItemStyle-Width="40%" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
-                    <asp:BoundField DataField="tel_prioridad" HeaderText="Prioridad"  ItemStyle-Width="10%"  ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
-
+                    <asp:BoundField DataField="tel_tipo" HeaderText="Tipo" ItemStyle-Width="30%" ItemStyle-HorizontalAlign="Center"/>
+                    <asp:BoundField DataField="tel_nro" HeaderText="Número"  ItemStyle-Width="50%" ItemStyle-HorizontalAlign="Center"/>
+                    <asp:BoundField DataField="tel_prioridad" HeaderText="Prioridad" ItemStyle-Width="15%" ItemStyle-HorizontalAlign="Center"/>
                 </Columns>                     
             </asp:GridView>
-        </div>  
-    </div>  
+        </div>
+    </div>      
     <div class="row">       
         <div class="container bg-white border-top border-3">
             <h2>DATOS DE TELEFONO</h2>
                         <div class="form-group">
                                <label>TELEFONO</label>
                         </div>
-                        <table align="center" style="width: 95%">
+                        <table align="center" style="width: 100%">
                             <colgroup>
                                 <col span="1" style="width: 15%;">
-                                <col span="1" style="width: 80%;">
+                                <col span="1" style="width: 85%;">
                             </colgroup>
                             <tbody>
                                 <tr> 
@@ -79,26 +82,12 @@
                                 </tr>
                             </tbody>
                         </table>                        
-                          <table align="center" style="width: 90%">
-                                <colgroup>
-                                    <col span="1" style="width: 25%;">
-                                    <col span="1" style="width: 35%;">
-                                    <col span="1" style="width: 35%;">
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <td class="align-bot form-group"> 
-                                            <label>TIPO</label>
-                                        </td>                                      
-                                        <td class="align-bot form-group">
-                                            <asp:RadioButton ID="rb_movil" runat="server" Text="Movil" />
-                                        </td>
-                                        <td class="align-bot form-group">
-                                            <asp:RadioButton ID="rb_fijo" runat="server" Text="Fijo" />
-                                        </td>
-                                    </tr>
-                                </tbody>
-                        </table>  
+                         <div class="form-group">
+                               <label>TIPO</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:DropDownList ID="dpl_tipo" runat="server" CssClass="form-control"></asp:DropDownList>
+                        </div>   
                         <div class="form-group">
                                <label>PRIORIDAD</label>
                         </div>
@@ -111,12 +100,16 @@
             <table align="center">
                 <tr>
                     <td>
-                        <asp:Button ID="btn_registrar" runat="server" Text="REGISTRAR" CssClass="btn btn-primary" ClientIDMode="static"/>
+                        <asp:Button ID="btn_registrar" runat="server" Text="REGISTRAR" CssClass="btn btn-primary" ClientIDMode="static" OnClick="btn_registrar_Click"/>
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        <asp:Button ID="btn_eliminar" runat="server" Text="ELIMINAR"  Visible="false" CssClass="btn bg-warning" ClientIDMode="static" OnClick="btn_eliminar_Click"/>
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>
                         <asp:Button ID="btn_cancelar" runat="server" Text="CANCELAR" CssClass="btn btn-danger" ClientIDMode="static"/>
-                    </td>
+                    </td>                    
                 </tr>
             </table>
         </div>

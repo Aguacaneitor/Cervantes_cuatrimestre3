@@ -40,13 +40,13 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.DropDownList dpl_contacto;
         
         /// <summary>
-        /// gv_direcciones control.
+        /// gv_telefonos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_direcciones;
+        protected global::System.Web.UI.WebControls.GridView gv_telefonos;
         
         /// <summary>
         /// dpl_codigoarea control.
@@ -67,22 +67,13 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.TextBox txt_nro;
         
         /// <summary>
-        /// rb_movil control.
+        /// dpl_tipo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rb_movil;
-        
-        /// <summary>
-        /// rb_fijo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rb_fijo;
+        protected global::System.Web.UI.WebControls.DropDownList dpl_tipo;
         
         /// <summary>
         /// dpl_prioridad control.
@@ -101,6 +92,15 @@ namespace Gestion_administrativa {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_registrar;
+        
+        /// <summary>
+        /// btn_eliminar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_eliminar;
         
         /// <summary>
         /// btn_cancelar control.

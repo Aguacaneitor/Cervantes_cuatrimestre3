@@ -51,38 +51,18 @@
                     <asp:BoundField DataField="dir_calle" HeaderText="Calle" ItemStyle-Width="20%" ItemStyle-HorizontalAlign="Center"/>
                     <asp:BoundField DataField="dir_altura" HeaderText="Altura"  ItemStyle-Width="10%" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
                     <asp:BoundField DataField="dir_piso" HeaderText="Piso"  ItemStyle-Width="5%"  ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
-                    <asp:BoundField DataField="dir_manzana" HeaderText="Departamento"  ItemStyle-Width="5%"  ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
+                    <asp:BoundField DataField="dir_dpto" HeaderText="Departamento"  ItemStyle-Width="5%"  ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
                     <asp:BoundField DataField="dir_barrio.barrio_nombre" HeaderText="Barrio"  ItemStyle-Width="15%"  ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
-                    <asp:BoundField DataField="dir_localidad.loc_nombre" HeaderText="Localidad"  ItemStyle-Width="15%" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
-                    <asp:BoundField DataField="dir_localidad.loc_provincia.provincia_nombre" HeaderText="Provincia" ItemStyle-Width="15%" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
-                    <asp:BoundField DataField="usu_cp" HeaderText="CD" ItemStyle-Width="10%" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
+                    <asp:BoundField DataField="dir_barrio.barrio_localidad.loc_nombre" HeaderText="Localidad"  ItemStyle-Width="15%" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
+                    <asp:BoundField DataField="dir_barrio.barrio_localidad.loc_provincia.provincia_nombre" HeaderText="Provincia" ItemStyle-Width="15%" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
+                    <asp:BoundField DataField="usu_cp" HeaderText="CP" ItemStyle-Width="10%" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
                 </Columns>                     
             </asp:GridView>
         </div>  
     </div>  
     <div class="row">       
         <div class="container bg-white border-top border-3">
-            <h2>DATOS DE DOMICILIO</h2>
-                        <div class="form-group">
-                               <label>PROVINCIA</label>
-                        </div>
-                        <div class="form-group">
-                            <asp:DropDownList ID="dpl_provincia" runat="server" CssClass="form-control"></asp:DropDownList>
-                        </div>
-
-                        <div class="form-group">
-                               <label>LOCALIDAD</label>
-                        </div>
-                        <div class="form-group">
-                            <asp:DropDownList ID="dpl_localidad" runat="server" CssClass="form-control"></asp:DropDownList>
-                        </div>
-
-                        <div class="form-group">
-                               <label>BARRIO</label>
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="txt_barrio" runat="server" Text="" CssClass="form-control"></asp:TextBox>
-                        </div>
+            <h2>DATOS DE DOMICILIO</h2>                        
                         <div class="form-group">
                                <label>CALLE</label>
                         </div>
@@ -96,6 +76,18 @@
                             <asp:TextBox ID="txt_usu_altura" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
+                               <label>MANZANA</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txt_usu_manzana" runat="server" Text="" CssClass="form-control"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                               <label>TORRE</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txt_usu_torre" runat="server" Text="" CssClass="form-control"></asp:TextBox>
+                        </div>                        
+                        <div class="form-group">
                                <label>PISO</label>
                         </div>
                         <div class="form-group">
@@ -106,6 +98,26 @@
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txt_usu_dpto" runat="server" Text="" CssClass="form-control"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                               <label>PROVINCIA</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:DropDownList ID="dpl_provincia" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="dpl_provincia_SelectedIndexChanged"></asp:DropDownList>
+                        </div>
+
+                        <div class="form-group">
+                               <label>LOCALIDAD</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:DropDownList ID="dpl_localidad" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="dpl_localidad_SelectedIndexChanged"></asp:DropDownList>
+                        </div>
+
+                        <div class="form-group">
+                               <label>BARRIO</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:DropDownList ID="dpl_barrio" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="dpl_barrio_SelectedIndexChanged"></asp:DropDownList>
                         </div>                        
                         <div class="form-group">
                                <label>CODIGO POSTAL</label>
@@ -120,6 +132,10 @@
                 <tr>
                     <td>
                         <asp:Button ID="btn_registrar" runat="server" Text="REGISTRAR" CssClass="btn btn-primary" ClientIDMode="static" OnClick="btn_registrar_Click"/>
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                     <td>
+                        <asp:Button ID="btn_eliminar" runat="server" Text="ELIMINAR"  Visible="false" CssClass="btn bg-warning" ClientIDMode="static" OnClick="btn_eliminar_Click"/>
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>

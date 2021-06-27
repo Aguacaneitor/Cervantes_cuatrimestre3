@@ -24,12 +24,10 @@ namespace Capa_AccesoDatos
 
         public SqlConnection ConexionBD()
         {
-
             SqlConnection conexion = new SqlConnection();
             conexion.ConnectionString = "Data Source=(LocalDb)\\localdbCervantes; Initial Catalog=Emp_Seguridad; Integrated Security = True";
             //conexion.ConnectionString = "Server = (LocalDb)\\localdbCervantes,Authentication = Windows Authentication, Database = Emp_Seguridad";
             return conexion;
-
         }
 
     }

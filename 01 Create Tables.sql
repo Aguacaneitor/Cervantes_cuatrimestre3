@@ -24,7 +24,6 @@ usu_fecalta datetime,
 usu_modi varchar(30),
 usu_fecmodi datetime
 );
-DROP TABLE Provincias;
 Create table Provincias
 (
 provinc_id int primary key identity (1,1) not null,
@@ -44,13 +43,17 @@ CREATE TABLE Telefonos
 tel_id int PRIMARY KEY IDENTITY	(1,1) NOT null,
 tel_tipo varchar(25),
 tel_nro varchar(25),
-tel_prioridad int
+tel_prioridad int,
+usu_id int
 )
 
 Create table Barrios
 (
 barrio_id int primary key identity (1,1) not null,
-barrio_nombre varchar(50)
+barrio_nombre varchar(50),
+loc_id int,
+CONSTRAINT fk_DireccionLocalidades FOREIGN KEY (loc_id) REFERENCES Localidades (loc_id)
+
 );
 
 CREATE TABLE Direccion
@@ -64,11 +67,10 @@ dir_torre varchar(10),
 dir_manzana varchar(10),
 tel_id int,
 barrio_id int,
-loc_id int,
 usu_CP varchar(10),
+usu_id int
 CONSTRAINT fk_DireccionTelefonos FOREIGN KEY (tel_id) REFERENCES Telefonos (tel_id),
-CONSTRAINT fk_DireccionBarrios FOREIGN KEY (barrio_id) REFERENCES Barrios (barrio_id),
-CONSTRAINT fk_DireccionLocalidades FOREIGN KEY (loc_id) REFERENCES Localidades (loc_id)
+CONSTRAINT fk_DireccionBarrios FOREIGN KEY (barrio_id) REFERENCES Barrios (barrio_id)
 )
 
 Create table Usuarios
@@ -81,20 +83,14 @@ usu_pass varchar(30) not null,
 fec_nac datetime,
 usu_tipodoc varchar(10),
 usu_nomdoc int,
-usu_telefono numeric(10,0),
-usu_celular numeric(10,0),
 usu_email varchar(50),
 usu_alta varchar(30),
 usu_fecalta datetime,
 usu_modi varchar(30),
 usu_fecmodi datetime,
-dir_id int,
 rol_id int,
-tel_id int,
 estado_usuario BIT
-CONSTRAINT fk_UsuariosDireccion FOREIGN KEY (dir_id) REFERENCES Direccion (dir_id),
-CONSTRAINT fk_UsuariosRoles FOREIGN KEY (rol_id) REFERENCES Roles (rol_id),
-CONSTRAINT fk_UsuariosTelefonos FOREIGN KEY (tel_id) REFERENCES Telefonos (tel_id)
+CONSTRAINT fk_UsuariosRoles FOREIGN KEY (rol_id) REFERENCES Roles (rol_id)
 );
 
 Create table Comprobante

@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GestionDeContacto.aspx" />
+    <Content Include="GestionDePagos.aspx" />
     <Content Include="GestionDeRol.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -117,6 +118,7 @@
     <Content Include="resources\css\style.css" />
     <Content Include="resources\images\calendario.png" />
     <Content Include="resources\images\logo_administrador.png" />
+    <Content Include="resources\images\Logo_Pagina_Principal.jpeg" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\credenciales.js" />
@@ -131,6 +133,13 @@
     </Compile>
     <Compile Include="GestionDeContacto.aspx.designer.cs">
       <DependentUpon>GestionDeContacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionDePagos.aspx.cs">
+      <DependentUpon>GestionDePagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionDePagos.aspx.designer.cs">
+      <DependentUpon>GestionDePagos.aspx</DependentUpon>
     </Compile>
     <Compile Include="GestionDeRol.aspx.cs">
       <DependentUpon>GestionDeRol.aspx</DependentUpon>

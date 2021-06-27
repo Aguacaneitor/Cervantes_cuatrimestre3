@@ -38,13 +38,17 @@
  		</span>
  	 </div>
  	 <ul class="lisst-unstyled components">
+          <li>
+ 	 		<a href="PanelGeneral.aspx<%= usuario_conectado %>">Inicio</a>
+ 	 	</li>
 
  	 	<!--<p>Menu<-->
+        <% if (Request.QueryString["perfil"] == "admin") { %>
  	 	<li class="active">
  	 		<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administrar</a>
  	 	  <ul class="collapse list-unstyled" id="homeSubmenu">
  	 	  	<li>
- 	 	  		<a href="RegistroDeUsuario.aspx<%= usuario_conectado %>">Generar Usuario</a>
+ 	 	  		<a href="RegistroDeUsuario.aspx<%= usuario_conectado %>">Gestionar Usuario</a>
  	 	  	</li>
  	 	  	<!--<li>
  	 	  		<a href="GestionDeRol.aspx">Gestionar Roles</a>
@@ -55,16 +59,19 @@
             <li>
  	 	  		<a href="GestionDeContacto.aspx<%= usuario_conectado %>">Gestionar Contactos</a>
  	 	  	</li>
+            
+            <li>
+ 	 	  		<a href="GestionDePagos.aspx<%= usuario_conectado %>">Gestionar pagos</a>
+ 	 	  	</li>
+            
  	 	  </ul>
  	 	</li>
+        <% } %>
  	 	<li>
  	 		<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestionar</a>
  	 		    <ul class="collapse list-unstyled" id="pageSubmenu">
  	 			    <li>
  	 				    <a href="GestionDeEventos.aspx<%= usuario_conectado %>"">Eventos</a>
- 	 			    </li>
- 	 			    <li>
- 	 				    <a href="#">Ejemplo 2</a>
  	 			    </li>
  	 		    </ul>
  	 	</li>
@@ -81,10 +88,13 @@
   	<div class="container-fluid">
   		<button type="button" id="sidebarCollapse" class="btn  btn-info">
   			<i class="fas fa-align-left"></i>
-  			<span>Opciones</span>
-  			
+  			<span>Opciones</span>  			
   		</button>
-  	</div>
+          <button type="button" id="btn_logout" class="btn  btn-danger" style="right: 0px;">
+  			<i class="bi bi-backspace-reverse"></i>
+  			<a href="login.aspx">Logout</a>  			
+  		</button>
+  	 </div>
   	  </nav>
 
 <br><br>
@@ -107,7 +117,7 @@
 $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
-            });
+            });   
         });
 
 </script>

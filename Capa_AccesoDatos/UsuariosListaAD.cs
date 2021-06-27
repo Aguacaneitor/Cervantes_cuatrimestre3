@@ -52,7 +52,6 @@ namespace Capa_AccesoDatos
                     o_usuario_temp.fec_nac = rd["fec_nac"] == DBNull.Value ? default(DateTime) : DateTime.Parse(rd["fec_nac"].ToString());
                     o_usuario_temp.usu_tipodoc = rd["usu_tipodoc"] == DBNull.Value ? "" : rd["usu_tipodoc"].ToString();
                     o_usuario_temp.usu_nomdoc = rd["usu_nomdoc"] == DBNull.Value ? "" : rd["usu_nomdoc"].ToString();
-                    o_usuario_temp.usu_telefono = rd["usu_telefono"] == DBNull.Value ? 0 : Convert.ToInt32(rd["usu_telefono"]);
                     o_usuario_temp.usu_email = rd["usu_email"] == DBNull.Value ? "" : rd["usu_email"].ToString();
                     o_usuario_temp.usu_alta = rd["usu_alta"] == DBNull.Value ? "" : rd["usu_alta"].ToString();
                     o_usuario_temp.usu_fecalta = rd["usu_fecalta"] == DBNull.Value ? default(DateTime) : DateTime.Parse(rd["usu_fecalta"].ToString());

@@ -3,5 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Pagina Principal que abre</h1>
+    <div class="text-center">
+        <img src="resources/images/Logo_Pagina_Principal.jpeg" class="img-fluid rounded" alt="Responsive image"/>
+    </div>
 </asp:Content>

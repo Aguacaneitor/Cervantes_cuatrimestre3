@@ -16,9 +16,8 @@ namespace Capa_Entidades
         public string dir_torre { get; set; }
         public string dir_manzana { get; set; }
         public Barrio dir_barrio { get; set; }
-        public Localidad dir_localidad { get; set; }
         public string usu_CP { get; set; }
-
+        public Usuario dir_usuario { get; set; }
         public Direccion() { }
 
     }

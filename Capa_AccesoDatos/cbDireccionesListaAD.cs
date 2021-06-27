@@ -24,41 +24,47 @@ namespace Capa_AccesoDatos
         }
         #endregion
 
-        public List<string> ObtenerListaLocalidades()
+        public List<Barrio> ObtenerListaBarrios()
         {
 
             SqlConnection conexion = null;
             SqlCommand cmd = null;
-            List<string> localidades = new List<string>();
+            List<Barrio> barrios = new List<Barrio>();
             SqlDataReader rd = null;
 
             try
             {
                 conexion = Conexion.getInstance().ConexionBD();
-                cmd = new SqlCommand("spListaLocalidades", conexion);
+                cmd = new SqlCommand("spListaBarrios", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
                 conexion.Open();
                 rd = cmd.ExecuteReader();
-                //if (rd.Read())
-                //{
                 while (rd.Read())
                 {
-                    var myString = rd.GetString(0); //The 0 stands for "the 0'th column", so the first column of the result.
-                                                    // Do somthing with this rows string, for example to put them in to a list
-                    localidades.Add(myString);
+                    Barrio o_barrio_temp = new Barrio();
+                    o_barrio_temp.barrio_id = rd["barrio_id"] == DBNull.Value ? 0 : Convert.ToInt32(rd["barrio_id"]);
+                    o_barrio_temp.barrio_nombre = rd["barrio_nombre"] == DBNull.Value ? "" : rd["barrio_nombre"].ToString();
+                    Provincia o_provincia_temp = new Provincia();
+                    o_provincia_temp.provinc_id = rd["provinc_id"] == DBNull.Value ? 0 : Convert.ToInt32(rd["provinc_id"]);
+                    o_provincia_temp.provincia_nombre = rd["provincia_nombre"] == DBNull.Value ? "" : rd["provincia_nombre"].ToString();
+                    Localidad o_localidad_temp = new Localidad();
+                    o_localidad_temp.loc_id = rd["loc_id"] == DBNull.Value ? 0 : Convert.ToInt32(rd["loc_id"]);
+                    o_localidad_temp.loc_nombre = rd["loc_nombre"] == DBNull.Value ? "" : rd["loc_nombre"].ToString();
+                    o_localidad_temp.loc_provincia = o_provincia_temp;
+                    o_barrio_temp.barrio_localidad = o_localidad_temp;
+                    barrios.Add(o_barrio_temp);
                 }
-                //}
             }
             catch (Exception ex)
             {
-                localidades = null;
+                barrios = null;
                 throw ex;
             }
             finally
             {
                 conexion.Close();
             }
-            return localidades;
+            return barrios;
 
         }
     }

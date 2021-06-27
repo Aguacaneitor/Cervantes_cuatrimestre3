@@ -41,5 +41,27 @@ namespace Capa_LogicaNegocio
         {
             UsuarioAD.getInstance().RegistrarUsuarioAD(o_usuario);
         }
+
+        public bool CambiarEstadoUsuario(String editor, String usuario, int cambio)
+        {
+            return UsuarioAD.getInstance().CambiarEstadoUsuario(editor, usuario, cambio);
+        }
+
+        public bool EditarUsuario(Usuario o_usuario)
+        {
+            return UsuarioAD.getInstance().EditarUsuario(o_usuario);
+        }
+
+        public Usuario ObtenerUsuario(String usuario)
+        {
+            try
+            {
+                return UsuarioAD.getInstance().ObtenerUsuario(usuario);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }            
+        }
     }
 }
