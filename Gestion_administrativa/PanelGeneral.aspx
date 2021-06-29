@@ -4,6 +4,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="text-center">
-        <img src="resources/images/Logo_Pagina_Principal.jpeg" class="img-fluid rounded" alt="Responsive image"/>
+        <img src="resources/images/Logo_Pagina_Principal.jpg" class="img-fluid rounded" alt="Responsive image"/>
     </div>
 </asp:Content>

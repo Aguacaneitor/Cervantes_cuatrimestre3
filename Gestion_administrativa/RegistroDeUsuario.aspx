@@ -38,7 +38,7 @@
         <div class="row">
                 <div class="col-md-6">
                     <div class="container bg-white border-top border-success">
-                        <h2>DATOS PERSONALES</h2>
+                        <h2>DATOS PERSONALES</h2>                        
                         <div class="form-group">
 
                                <label>DOCUMENTO DE IDENTIDAD</label>
@@ -48,7 +48,7 @@
                                 <table align="center" style="width: 95%">
                                     <colgroup>
                                         <col span="1" style="width: 20%;">
-                                        <col span="1" style="width: 75%;">
+                                        <col span="1" style="width: 70%;">
                                     </colgroup>
                                     <tbody>
                                         <tr> 
@@ -67,7 +67,7 @@
                                <label>NOMBRES</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txt_usu_Nom" runat="server" Text="" CssClass="form-control" ClientIDMode="static"></asp:TextBox>
+                            <span><asp:TextBox ID="txt_usu_Nom" runat="server" Text="" CssClass="form-control" ClientIDMode="static"></asp:TextBox></span>                          
                         </div>
                         <div class="form-group">
                                <label>APELLIDOS</label>
@@ -150,8 +150,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-12">
+                    <p class="text-center">todos los campos son obligatorios</p>
+                </div>
             </div>
         <div class="row">
+
             <table align="center">
                 <tr>
                     <td>

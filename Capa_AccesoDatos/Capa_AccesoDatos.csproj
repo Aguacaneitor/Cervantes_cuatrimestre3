@@ -43,6 +43,7 @@
     <Compile Include="cbDireccionesListaAD.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DireccionesAD.cs" />
+    <Compile Include="PagosAD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RolesListaAD.cs" />
     <Compile Include="TelefonosAD.cs" />

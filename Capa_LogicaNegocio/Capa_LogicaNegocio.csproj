@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="cbDireccionesListaLN.cs" />
     <Compile Include="DireccionesLN.cs" />
+    <Compile Include="PagosLN.cs" />
     <Compile Include="RolesListaLN.cs" />
     <Compile Include="TelefonosLN.cs" />
     <Compile Include="UsuarioLN.cs" />
