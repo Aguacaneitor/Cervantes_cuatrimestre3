@@ -82,6 +82,7 @@ namespace Gestion_administrativa
             txt_usuario_buscado.Text = "";
             llenar_gridview(null);
             btn_eliminar.Visible = false;
+            label_movil.Visible = false;
         }
 
         protected void btn_buscar_usuario_Click(object sender, EventArgs e)
@@ -102,7 +103,7 @@ namespace Gestion_administrativa
             gv_telefonos.DataSource = telefonos;
             gv_telefonos.DataBind();
             dpl_contacto.Items.Clear();
-
+            Usuario o_usuario = UsuarioLN.getInstance().ObtenerUsuario(txt_usuario_buscado.Text);
             if (telefonos == null)
             {
                 dpl_contacto.Items.Add("Ingrese y busque un usuario para editar.");
@@ -112,6 +113,7 @@ namespace Gestion_administrativa
                 telefonos_almacenados = telefonos;
                 if (telefonos.Count > 0)
                 {
+                    txt_usuario_buscado.Text = o_usuario.usuario;
                     dpl_prioridad.Items.Clear();
                     dpl_prioridad.Items.Add("Seleccione la prioridad del contacto.");
                     dpl_contacto.Items.Add("Seleccione un contacto para editar.");
@@ -130,11 +132,19 @@ namespace Gestion_administrativa
                     dpl_prioridad.Items.Add("" + (minima_prioridad+1));
                 }
                 else
-                {
-                    dpl_contacto.Items.Add("Registre el primer contacto de " + txt_usuario_buscado.Text + ".");
-                    dpl_prioridad.Items.Clear();
-                    dpl_prioridad.Items.Add("Seleccione la prioridad del contacto.");
-                    dpl_prioridad.Items.Add("1");
+                {                    
+                    if (o_usuario != null)
+                    {
+                        dpl_contacto.Items.Add("Registre el primer contacto de " + o_usuario.usu_Nom + ".");
+                        dpl_prioridad.Items.Clear();
+                        dpl_prioridad.Items.Add("Seleccione la prioridad del contacto.");
+                        dpl_prioridad.Items.Add("1");                        
+                    }
+                    else
+                    {
+                        limpiar();
+                        Response.Write("<script>alert('No se pudo encontrar el usuario.')</script>");
+                    }                    
                 }
             }
         }
@@ -214,19 +224,30 @@ namespace Gestion_administrativa
             string txt_salida = "";
             if (dpl_codigoarea.SelectedValue == "Seleccione")
             {
-                txt_salida = "Codigo de Area ";
+                txt_salida += txt_salida == "" ? "Codigo de Area" : ", Codigo de Area";
             }
             if (dpl_prioridad.SelectedValue == "Seleccione la prioridad del contacto.")
             {
-                txt_salida = "Prioridad ";
+                txt_salida += txt_salida == "" ? "Prioridad" : ", Prioridad";
             }
             if (dpl_tipo.SelectedValue == "Seleccione tipo de contacto.")
             {
-                txt_salida = "Tipo de Contacto ";
+                txt_salida += txt_salida == "" ? "Tipo de Contacto" : ", Tipo de Contacto";
             }
             if (!(Regex.Match(txt_nro.Text, @"[0-9]*").Value == txt_nro.Text) | "" == txt_nro.Text)
+            {                
+                txt_salida += txt_salida == "" ? "Número de Telefono" : ", Número de Telefono";
+            }
+            try
             {
-                txt_salida = "Número de Telefono ";
+                if (!(Convert.ToInt32(txt_nro.Text) / 1000000 > 1 && Convert.ToInt32(txt_nro.Text) / 1000000 < 10))
+                {
+                    txt_salida += txt_salida == "" ? "Número de Telefono" : ", Número de Telefono";
+                }
+            }
+            catch (Exception ex)
+            {
+                txt_salida += txt_salida == "" ? "Número de Telefono" : ", Número de Telefono";
             }
             if (txt_salida != "")
             {
@@ -294,7 +315,7 @@ namespace Gestion_administrativa
                     }
                     finally
                     {
-                        limpiar();
+                        llenar_gridview(TelefonosLN.getInstance().ObtenerListaTelefonos(txt_usuario_buscado.Text));
                     }
                 }
             }
@@ -331,6 +352,22 @@ namespace Gestion_administrativa
             {
                 limpiar();
             }
+        }
+
+        protected void dpl_tipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (dpl_tipo.SelectedValue == "MOVIL")
+            {
+                label_movil.Visible = true;
+            } else
+            {
+                label_movil.Visible = false;
+            }            
+        }
+
+        protected void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }

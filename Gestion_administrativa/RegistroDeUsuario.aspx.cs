@@ -305,7 +305,7 @@ namespace Gestion_administrativa
 
         protected void btn_buscar_usuario_Click(object sender, EventArgs e)
         {
-            if (txt_usuario_buscado.Text != "")
+            if (txt_usuario_buscado.Text != "" && txt_usuario_buscado.Text.ToUpper() != "ADMIN")
             {
                 Usuario o_usuario = UsuarioLN.getInstance().ObtenerUsuario(txt_usuario_buscado.Text);
                 if (o_usuario != null)
@@ -319,30 +319,49 @@ namespace Gestion_administrativa
                         btn_eliminar.Text = "DESACTIVAR";
                     }
                     btn_registrar.Text = "  EDITAR ";
-                    txt_usuario.Text = o_usuario.usuario;
-                    txt_usu_Nom.Text = o_usuario.usu_Nom;
-                    txt_usu_Ape.Text = o_usuario.usu_Ape;
-                    drp_tipodoc.SelectedValue = o_usuario.usu_tipodoc;
-                    txt_usu_nomdoc.Text = ""+o_usuario.usu_nomdoc;
-                    txt_usu_email.Text = o_usuario.usu_email;
-                    txt_usu_pass.Text = o_usuario.usu_pass;
+                    txt_usuario.Text = o_usuario.usuario != null? o_usuario.usuario : "";
+                    txt_usu_Nom.Text = o_usuario.usu_Nom != null ? o_usuario.usu_Nom : "";
+                    txt_usu_Ape.Text = o_usuario.usu_Ape != null ? o_usuario.usu_Ape : "";
+                    if (o_usuario.usu_tipodoc != null)
+                    {
+                        drp_tipodoc.SelectedValue = o_usuario.usu_tipodoc;
+                    }
+                    else
+                    {
+                        drp_tipodoc.SelectedIndex = 0;
+                    }
+                    txt_usu_nomdoc.Text = o_usuario.usu_nomdoc != null ? "" + o_usuario.usu_nomdoc : "";
+                    txt_usu_email.Text = o_usuario.usu_email != null ? o_usuario.usu_email : "";
+                    txt_usu_pass.Text = o_usuario.usu_pass != null ? o_usuario.usu_pass : "";
                     //txt_usu_email.Text = o_usuario.usu_email;
-                    lb_rol.SelectedValue = o_usuario.o_rol.rol_descripcion;
-                    drp_dia.Text = ""+o_usuario.fec_nac.Day;
-                    drp_mes.Text = "" + o_usuario.fec_nac.Month;
-                    drp_agno.Text = "" + o_usuario.fec_nac.Year;
+                    if (o_usuario.o_rol.rol_descripcion != null)
+                    {
+                        lb_rol.SelectedValue = o_usuario.o_rol.rol_descripcion;
+                    }
+                    else
+                    {
+                        lb_rol.SelectedIndex = 0;
+                    }                    
+                    drp_dia.Text = o_usuario.fec_nac.Day != null ? "" + o_usuario.fec_nac.Day : "0"+1;
+                    drp_mes.Text = o_usuario.fec_nac.Month != null ? "" + o_usuario.fec_nac.Month : "0"+1;
+                    drp_agno.Text = o_usuario.fec_nac.Year != null ? "" + o_usuario.fec_nac.Year : ""+1900;
                     btn_eliminar.Visible = true;
                     txt_usu_nomdoc.ReadOnly = true;
                     txt_usuario.ReadOnly = true;
                     drp_tipodoc.Enabled = false;
 
-                } else
+                }                
+                else
                 {
                     Response.Write("<script>alert('Usuario no encontrado.')</script>");
                 }
                 
             }
-            
+            else if (txt_usuario_buscado.Text.ToUpper() == "ADMIN")
+            {
+                Response.Write("<script>alert('No se pueden modificar estos datos del usuario Admin.')</script>");
+            }
+
         }
 
         protected void btn_eliminar_Click(object sender, EventArgs e)
@@ -351,7 +370,7 @@ namespace Gestion_administrativa
             {
                 //Activa
                 String editor = Request.QueryString["editor"] != null ? Request.QueryString["editor"] : "default";
-                if(UsuarioLN.getInstance().CambiarEstadoUsuario(editor, txt_usuario.Text, 1))
+                if (UsuarioLN.getInstance().CambiarEstadoUsuario(editor, txt_usuario.Text, 1))
                 {
                     Response.Write("<script>alert('Usuario activado.')</script>");
                     btn_eliminar.Text = "DESACTIVAR";

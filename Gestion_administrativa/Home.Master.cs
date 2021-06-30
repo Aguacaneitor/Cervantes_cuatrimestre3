@@ -10,6 +10,7 @@ namespace Gestion_administrativa
     public partial class Home : System.Web.UI.MasterPage
     {
         public static string usuario_conectado {set;get;}
+        public static string usuario_perfilo { set; get; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,6 +19,7 @@ namespace Gestion_administrativa
             {
                 Lbl_nombreBienvenida.Text = Request.QueryString["nombre"];
                 //usuario_conectado = Request.QueryString["usuario"];
+                usuario_perfilo = Request.QueryString["perfil"];
                 usuario_conectado = "?nombre=" + Request.QueryString["nombre"] + "&perfil=" + Request.QueryString["perfil"] + "&editor=" + Request.QueryString["editor"];
             }
             else

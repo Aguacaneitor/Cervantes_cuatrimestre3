@@ -64,7 +64,7 @@
         <div class="container bg-white border-top border-3">
             <h2>DATOS DE TELEFONO</h2>
                         <div class="form-group">
-                               <label>TELEFONO</label>
+                               <strong><label>TELEFONO</label></strong>
                         </div>
                         <table align="center" style="width: 100%">
                             <colgroup>
@@ -81,19 +81,23 @@
                                     </td>
                                 </tr>
                             </tbody>
-                        </table>                        
+                        </table> 
+                                <asp:Label ID="label_movil" runat="server" Text="*Registre el numero sin anteponer el prefijo 15." Visible="false"></asp:Label>
                          <div class="form-group">
-                               <label>TIPO</label>
+                               <strong><label>TIPO</label></strong>
                         </div>
                         <div class="form-group">
-                            <asp:DropDownList ID="dpl_tipo" runat="server" CssClass="form-control"></asp:DropDownList>
+                            <asp:DropDownList ID="dpl_tipo" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="dpl_tipo_SelectedIndexChanged"></asp:DropDownList>
                         </div>   
                         <div class="form-group">
-                               <label>PRIORIDAD</label>
+                               <strong><label>PRIORIDAD</label></strong>
                         </div>
                         <div class="form-group">
                             <asp:DropDownList ID="dpl_prioridad" runat="server" CssClass="form-control"></asp:DropDownList>
-                        </div>                        
+                        </div>   
+            <div class="col-md-12">
+                    <p class="text-center">Todos los campos son obligatorios</p>
+                </div>                     
         </div>
     </div>
     <div class="row">
@@ -104,11 +108,11 @@
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>
-                        <asp:Button ID="btn_eliminar" runat="server" Text="ELIMINAR"  Visible="false" CssClass="btn bg-warning" ClientIDMode="static" OnClick="btn_eliminar_Click"/>
+                        <asp:Button ID="btn_eliminar" runat="server" Text="ELIMINAR"  Visible="false" CssClass="btn bg-warning" ClientIDMode="static" OnClientClick="javascript:return confirm('¿Esta seguro de la operación?');" OnClick="btn_eliminar_Click"/>
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>
-                        <asp:Button ID="btn_cancelar" runat="server" Text="CANCELAR" CssClass="btn btn-danger" ClientIDMode="static"/>
+                        <asp:Button ID="btn_cancelar" runat="server" Text="CANCELAR" CssClass="btn btn-danger" ClientIDMode="static" OnClick="btn_cancelar_Click"/>
                     </td>                    
                 </tr>
             </table>

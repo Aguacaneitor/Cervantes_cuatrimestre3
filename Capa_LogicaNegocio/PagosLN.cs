@@ -37,6 +37,14 @@ namespace Capa_LogicaNegocio
         public List<Comprobante> ObtenerListaComprobantesPagos(int usuario_ID, String tipo_Comprobante)
         {
             return PagosAD.getInstance().ObtenerListaComprobantesPagos(usuario_ID, tipo_Comprobante);
-        }        
+        }
+        public bool RegistrarCupon(Comprobante o_comprobante)
+        {
+            return PagosAD.getInstance().RegistrarCupon(o_comprobante);
+        }
+        public bool EliminarCupon(int com_id)
+        {
+            return PagosAD.getInstance().EliminarCupon(com_id);
+        }
     }
 }

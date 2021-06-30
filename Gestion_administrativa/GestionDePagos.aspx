@@ -47,6 +47,11 @@
                                 <asp:BoundField DataField="com_TipoComprobante.TC_nombre" HeaderText="Tipo"  ItemStyle-Width="20%"  ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center"/>
                             </Columns>                     
                         </asp:GridView>
+                        <br>
+                        <div class="form-group">
+                            <asp:DropDownList ID="dpl_cuotaHistorica" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="dpl_cuotaHistorica_SelectedIndexChanged"></asp:DropDownList>
+                        </div>
+                        <asp:Button ID="btn_eliminarCuota" runat="server" Text="ELIMINAR"  Visible="false" CssClass="btn bg-warning" ClientIDMode="static" OnClientClick="javascript:return confirm('¿Esta seguro de la operación?');" OnClick="btn_eliminarCuota_Click"/>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -65,24 +70,26 @@
                             <asp:DropDownList ID="dpl_cuotaPagar" runat="server" CssClass="form-control"></asp:DropDownList>
                         </div>
                     </div>
-                </div>
-            </div>
-        <div class="row">
+                
             <table align="center">
                 <tr>
                     <td>
-                        <asp:Button ID="btn_registrarPago" runat="server" Text="REGISTRAR PAGO" CssClass="btn btn-primary"/>
+                        <asp:Button ID="btn_registrarPago" runat="server" Text="REGISTRAR PAGO" CssClass="btn btn-primary" OnClick="btn_registrarPago_Click"/>
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                      <td>
-                        <asp:Button ID="btn_eliminar" runat="server" Text="DESACTIVAR"  Visible="false" CssClass="btn bg-warning" ClientIDMode="static"/>
+                        <asp:Button ID="btn_eliminar" runat="server" Text="ELIMINAR"  Visible="false" CssClass="btn bg-warning" ClientIDMode="static" OnClientClick="javascript:return confirm('¿Esta seguro de la operación?');" OnClick="btn_eliminar_Click"/>
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>
-                        <asp:Button ID="btn_cancelar" runat="server" Text="CANCELAR" CssClass="btn btn-danger"/>
+                        <asp:Button ID="btn_cancelar" runat="server" Text="CANCELAR" CssClass="btn btn-danger" OnClick="btn_cancelar_Click"/>
                     </td>
                 </tr>
             </table>
+               </div>
+            </div>
+        <div class="row">
+            
         </div>
         </div>
     </section>

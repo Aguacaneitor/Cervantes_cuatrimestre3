@@ -22,6 +22,7 @@ namespace Capa_Entidades
         public int com_Pagado { get; set; }
         public String comp_total_formateado { get; set; }
         public String comp_fecha_formateado { get; set; }
+        public int comp_id_pago { get; set; }
 
         public Comprobante() { }
 

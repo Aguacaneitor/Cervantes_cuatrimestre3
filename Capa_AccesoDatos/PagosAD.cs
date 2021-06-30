@@ -98,6 +98,8 @@ namespace Capa_AccesoDatos
                 cmd.Parameters.AddWithValue("@prmSuc", o_comprobante.comp_suc);
                 cmd.Parameters.AddWithValue("@prmUserID", o_comprobante.com_Usuario.usu_id);
                 cmd.Parameters.AddWithValue("@prmProductoID", o_comprobante.com_Producto.prod_id);
+                String fecha_asociada = o_comprobante.com_TipoComprobante.TC_nombre == "Recibo Pago" ? o_comprobante.comp_fecha.ToString("yyyy-MM-dd HH:mm:ss") : "NULL";
+                cmd.Parameters.AddWithValue("@comp_fecha_relacionado", fecha_asociada);
 
                 conexion.Open();
                 rd = cmd.ExecuteReader();
@@ -155,10 +157,13 @@ namespace Capa_AccesoDatos
                     o_tipoComprobanteTemp.TC_nombre = rd["TC_nombre"] == DBNull.Value ? "" : rd["TC_nombre"].ToString();
                     o_tipoComprobanteTemp.TC_signo = rd["TC_signo"] == DBNull.Value ? 0 : Convert.ToInt32(rd["TC_signo"]);
                     o_comprobante_temp.com_TipoComprobante = o_tipoComprobanteTemp;
-                    o_comprobante_temp.comp_id = rd["prod_id"] == DBNull.Value ? 0 : Convert.ToInt32(rd["prod_id"]);
                     o_comprobante_temp.com_Pagado = rd["Pagado"] == DBNull.Value ? 0 : Convert.ToInt32(rd["Pagado"]);
                     o_comprobante_temp.comp_total_formateado = rd["comp_total_formateado"] == DBNull.Value ? "" : rd["comp_total_formateado"].ToString();
-                    o_comprobante_temp.comp_fecha_formateado = rd["comp_fecha_formateado"] == DBNull.Value ? "" : rd["comp_fecha_formateado"].ToString();                    
+                    o_comprobante_temp.comp_fecha_formateado = rd["comp_fecha_formateado"] == DBNull.Value ? "" : rd["comp_fecha_formateado"].ToString();
+                    Producto o_producto_temp = new Producto();
+                    o_producto_temp.prod_id = rd["prod_id"] == DBNull.Value ? 0 : Convert.ToInt32(rd["prod_id"]);
+                    o_comprobante_temp.com_Producto = o_producto_temp;
+                    o_comprobante_temp.comp_id_pago = rd["comp_id_pago"] == DBNull.Value ? 0 : Convert.ToInt32(rd["comp_id_pago"]);
                     o_comprobante.Add(o_comprobante_temp);
                 }
             }
@@ -224,6 +229,35 @@ namespace Capa_AccesoDatos
                 conexion.Close();
             }
             return o_comprobante;
+        }
+
+        public bool EliminarCupon(int com_id)
+        {
+            SqlConnection conexion = null;
+            SqlCommand cmd = null;
+            SqlDataReader rd = null;
+            try
+            {
+                conexion = Conexion.getInstance().ConexionBD();
+                cmd = new SqlCommand("spEliminarComprobante", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@prmComID", com_id);
+                conexion.Open();
+                rd = cmd.ExecuteReader();
+                if (rd.Read())
+                {
+                    Console.Write(rd);
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+            return true;
         }
 
     }

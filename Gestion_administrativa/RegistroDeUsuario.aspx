@@ -32,6 +32,9 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="col-md-12">
+                    <p class="text-center">Para editar busque un usuario, si no registre uno nuevo. Se puede buscar con el Documento, Email o Usuario</p>
+                </div>
             </div>
         </div>
         </div>
@@ -41,7 +44,7 @@
                         <h2>DATOS PERSONALES</h2>                        
                         <div class="form-group">
 
-                               <label>DOCUMENTO DE IDENTIDAD</label>
+                               <strong><label>DOCUMENTO DE IDENTIDAD</label></strong>
                         </div>
                         <div class="form-group">
                             <div class="row">
@@ -64,19 +67,19 @@
                             </div>
                         </div>
                         <div class="form-group">
-                               <label>NOMBRES</label>
+                               <strong><label>NOMBRES</label></strong>
                         </div>
                         <div class="form-group">
                             <span><asp:TextBox ID="txt_usu_Nom" runat="server" Text="" CssClass="form-control" ClientIDMode="static"></asp:TextBox></span>                          
                         </div>
                         <div class="form-group">
-                               <label>APELLIDOS</label>
+                               <strong><label>APELLIDOS</label></strong>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txt_usu_Ape" runat="server" Text="" CssClass="form-control" ClientIDMode="static"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label>FECHA DE NACIMIENTO</label>
+                            <strong><label>FECHA DE NACIMIENTO</label></strong>
                         </div>
                         <div class="form-group">
                             <div class="row">
@@ -95,19 +98,19 @@
                                 <tbody>
                                      <tr> 
                                     <td class="align-bottom">
-                                        <label>DIA:</label>
+                                        <strong><label>DIA:</label></strong>
                                     </td>
                                     <td class="align-top">
                                         <asp:TextBox ID="drp_dia" runat="server" ClientIDMode="static" width="100px"></asp:TextBox>                                                                      
                                     </td>
                                     <td class="align-bottom">
-                                        <label>MES:</label>
+                                        <strong><label>MES:</label></strong>
                                     </td>
                                     <td class="align-top">
                                         <asp:TextBox ID="drp_mes" runat="server" ClientIDMode="static"  width="100px"></asp:TextBox>
                                     </td>
                                     <td class="align-bottom">
-                                        <label>AÑO:</label>
+                                        <strong><label>AÑO:</label></strong>
                                     </td>
                                     <td class="align-top">
                                         <asp:TextBox ID="drp_agno" runat="server" ClientIDMode="static" width="100px"></asp:TextBox>  
@@ -123,27 +126,27 @@
                     <div class="container bg-white border-top border-3 border-success">
                         <h2>DATOS DE USUARIO</h2>
                         <div class="form-group">
-                               <label>MAIL ELECTRONICO</label>
+                               <strong><label>MAIL ELECTRONICO</label></strong>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txt_usu_email" runat="server" Text="" CssClass="form-control" ClientIDMode="static"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                               <label>USUARIO</label>
+                               <strong><label>USUARIO</label></strong>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txt_usuario" runat="server" Text="" CssClass="form-control" ClientIDMode="static"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
-                               <label>CONTRASEÑA</label>
+                               <strong><label>CONTRASEÑA</label></strong>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txt_usu_pass" runat="server" TextMode="Password" Text="" CssClass="form-control" ClientIDMode="static"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
-                               <label>ROL</label>
+                               <strong><label>ROL</label></strong>
                         </div>
                         <div class="form-group">
                             <asp:DropDownList ID="lb_rol" runat="server" CssClass="form-control"></asp:DropDownList>
@@ -151,7 +154,7 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <p class="text-center">todos los campos son obligatorios</p>
+                    <p class="text-center">Todos los campos son obligatorios</p>
                 </div>
             </div>
         <div class="row">
@@ -163,7 +166,7 @@
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                      <td>
-                        <asp:Button ID="btn_eliminar" runat="server" Text="DESACTIVAR"  Visible="false" CssClass="btn bg-warning" ClientIDMode="static" OnClick="btn_eliminar_Click"/>
+                        <asp:Button ID="btn_eliminar" runat="server" Text="DESACTIVAR"  Visible="false" CssClass="btn bg-warning" ClientIDMode="static" OnClientClick="javascript:return confirm('¿Esta seguro de la operación?');" OnClick="btn_eliminar_Click"/>
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>

@@ -49,6 +49,24 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.GridView gv_cupones_totales;
         
         /// <summary>
+        /// dpl_cuotaHistorica control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dpl_cuotaHistorica;
+        
+        /// <summary>
+        /// btn_eliminarCuota control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_eliminarCuota;
+        
+        /// <summary>
         /// gv_cupones_pendientes control.
         /// </summary>
         /// <remarks>

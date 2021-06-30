@@ -64,13 +64,13 @@
         <div class="container bg-white border-top border-3">
             <h2>DATOS DE DOMICILIO</h2>                        
                         <div class="form-group">
-                               <label>CALLE</label>
+                               <strong><label>* CALLE</label></strong>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txt_usu_calle" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                               <label>ALTURA</label>
+                               <strong><label>* ALTURA</label></strong>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txt_usu_altura" runat="server" Text="" CssClass="form-control"></asp:TextBox>
@@ -100,27 +100,27 @@
                             <asp:TextBox ID="txt_usu_dpto" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                               <label>PROVINCIA</label>
+                               <strong><label><strong>*</strong> PROVINCIA</label></strong>
                         </div>
                         <div class="form-group">
                             <asp:DropDownList ID="dpl_provincia" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="dpl_provincia_SelectedIndexChanged"></asp:DropDownList>
                         </div>
 
                         <div class="form-group">
-                               <label>LOCALIDAD</label>
+                               <strong><label>* LOCALIDAD</label></strong>
                         </div>
                         <div class="form-group">
                             <asp:DropDownList ID="dpl_localidad" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="dpl_localidad_SelectedIndexChanged"></asp:DropDownList>
                         </div>
 
                         <div class="form-group">
-                               <label>BARRIO</label>
+                               <strong><label>* BARRIO</label></strong>
                         </div>
                         <div class="form-group">
                             <asp:DropDownList ID="dpl_barrio" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="dpl_barrio_SelectedIndexChanged"></asp:DropDownList>
                         </div>                        
                         <div class="form-group">
-                               <label>CODIGO POSTAL</label>
+                               <strong><label>* CODIGO POSTAL</label></strong>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txt_usu_CP" runat="server" Text="" CssClass="form-control"></asp:TextBox>
@@ -135,7 +135,7 @@
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                      <td>
-                        <asp:Button ID="btn_eliminar" runat="server" Text="ELIMINAR"  Visible="false" CssClass="btn bg-warning" ClientIDMode="static" OnClick="btn_eliminar_Click"/>
+                        <asp:Button ID="btn_eliminar" runat="server" Text="ELIMINAR"  Visible="false" CssClass="btn bg-warning" ClientIDMode="static" OnClientClick="javascript:return confirm('¿Esta seguro de la operación?');" OnClick="btn_eliminar_Click"/>
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>

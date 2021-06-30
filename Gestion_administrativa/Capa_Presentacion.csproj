@@ -117,7 +117,8 @@
     <Content Include="resources\css\estilos.css" />
     <Content Include="resources\css\style.css" />
     <Content Include="resources\images\calendario.png" />
-    <Content Include="resources\images\logo_administrador.png" />
+    <Content Include="resources\images\logo_admin.png" />
+    <Content Include="resources\images\logo_operador.png" />
     <Content Include="resources\images\Logo_Pagina_Principal.jpeg" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />

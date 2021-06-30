@@ -64,7 +64,7 @@ namespace Gestion_administrativa
             gv_direcciones.DataSource = direcciones;
             gv_direcciones.DataBind();
             dpl_domicilio.Items.Clear();
-
+            Usuario o_usuario_temp = UsuarioLN.getInstance().ObtenerUsuario(txt_usuario_buscado.Text);
             if (direcciones == null)
             {
                 dpl_domicilio.Items.Add("Ingrese y busque un usuario para editar.");
@@ -74,6 +74,7 @@ namespace Gestion_administrativa
                 direcciones_almacenadas = direcciones;
                 if (direcciones.Count > 0)
                 {
+                    txt_usuario_buscado.Text = o_usuario_temp.usuario;
                     dpl_domicilio.Items.Add("Seleccione domicilio a editar.");
                     foreach (Direccion direccion in direcciones)
                     {
@@ -101,7 +102,16 @@ namespace Gestion_administrativa
                 }
                 else
                 {
-                    dpl_domicilio.Items.Add("Registre el primer domicilio de " + txt_usuario_buscado.Text + ".");
+                    if (o_usuario_temp != null)
+                    {
+                        dpl_domicilio.Items.Add("Registre el primer domicilio de " + o_usuario_temp.usu_Nom + ".");
+                        txt_usuario_buscado.Text = o_usuario_temp.usuario;
+                    }
+                    else
+                    {
+                        limpiar_campos();
+                        Response.Write("<script>alert('No se pudo encontrar el usuario.')</script>");
+                    }                    
                 }                
             }
         }
@@ -196,23 +206,23 @@ namespace Gestion_administrativa
                 }
                 if ("" == txt_usu_calle.Text)
                 {
-                    txt_salida += "Calle ";
+                    txt_salida += txt_salida == "" ? "Calle" : ", Calle";
                 }
                 if (!(Regex.Match(txt_usu_altura.Text, @"[0-9]*").Value == txt_usu_altura.Text) | "" == txt_usu_altura.Text)
                 {
-                    txt_salida += "Altura ";
+                    txt_salida += txt_salida == "" ? "Altura" : ", Altura";
                 }
                 if (Regex.Match(dpl_provincia.SelectedValue, @"Seleccione.*").Value != "")
                 {
-                    txt_salida += "Provincia ";
+                    txt_salida += txt_salida == "" ? "Provincia" : ", Provincia";
                 }
                 if (Regex.Match(dpl_localidad.SelectedValue, @"Seleccione.*").Value != "")
                 {
-                    txt_salida += "Localidad ";
+                    txt_salida += txt_salida == "" ? "Localidad" : ", Localidad";
                 }
                 if (Regex.Match(dpl_barrio.SelectedValue, @"Seleccione.*").Value != "")
                 {
-                    txt_salida += "Barrio ";
+                    txt_salida += txt_salida == "" ? "Barrio" : ", Barrio";
                 }
                 if (txt_salida == "")
                 {
@@ -275,7 +285,11 @@ namespace Gestion_administrativa
                         if (parametros != "")
                         {
                             Response.Redirect("GestionDeContacto.aspx" + parametros);
-                        }                        
+                        }
+                        else
+                        {
+                            llenar_gridview(DireccionesLN.getInstance().ObtenerListaDirecciones(txt_usuario_buscado.Text));
+                        }                       
                     }
                 } else
                 {

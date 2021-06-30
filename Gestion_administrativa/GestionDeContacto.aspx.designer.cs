@@ -67,6 +67,15 @@ namespace Gestion_administrativa {
         protected global::System.Web.UI.WebControls.TextBox txt_nro;
         
         /// <summary>
+        /// label_movil control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label_movil;
+        
+        /// <summary>
         /// dpl_tipo control.
         /// </summary>
         /// <remarks>

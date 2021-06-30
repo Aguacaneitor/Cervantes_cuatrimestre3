@@ -26,7 +26,7 @@
  	
  	 <div class="sidebar-header">
 		<span>
-		    <img src="resources/images/logo_administrador.png" class="img-fluid rounded-circle mx-5 py-2" alt="Responsive image">
+		    <img src="resources/images/logo_<%= Request.QueryString["perfil"] %>.png" class="img-fluid rounded-circle mx-5 py-2" alt="Responsive image" width="50" height="50">
 		</span>
 		<span>
  	 	    <p class="mx-1" >Sistema de Gestión</p>
