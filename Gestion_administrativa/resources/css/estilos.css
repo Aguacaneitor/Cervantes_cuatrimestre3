@@ -8,3 +8,22 @@
 .footer {
             height: 31px;
         }
+.content {
+  position: relative;
+}
+#sidebarigth {
+  width: 100px;
+  background-color: #616161;
+  margin-right: 50px;
+  position: absolute;
+  top: 0;
+  bottom:0;
+  right: 0;
+  padding: 0;
+  text-align: left;
+  
+}
+#sidebarcontentsrigth {
+  padding: 5px 0px 5px 0px;
+  color: #616161;
+}

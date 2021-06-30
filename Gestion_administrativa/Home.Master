@@ -61,7 +61,7 @@
  	 	  	</li>
             
             <li>
- 	 	  		<a href="GestionDePagos.aspx<%= usuario_conectado %>">Gestionar pagos</a>
+ 	 	  		<a href="GestionDePagos.aspx<%= usuario_conectado %>">Gestionar Cobros</a>
  	 	  	</li>
             
  	 	  </ul>

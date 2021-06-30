@@ -5,7 +5,7 @@
     
     <section class="content-header">
         <h1 style="text-align:center">GESTIÓN DE COMPROBANTES</h1>
-        <asp:Button ID="btn_generarCuponesPago" Text="Generar Cupones" runat="server" OnClick="btn_generarCuponesPago_Click"/>
+        <asp:Button ID="btn_generarCuponesPago" Text="Generar Cupones" runat="server" Visible="True" OnClick="btn_generarCuponesPago_Click"/>
     </section>
     <section class="content">
         <div class="container">
